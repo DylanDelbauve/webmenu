@@ -25,24 +25,24 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '4.2.1',
-    'version' => '4.2.1.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '582cc987f2ff00ee0b225af1d8dbea19323bbb83',
     'name' => 'cakephp/app',
   ),
   'versions' => 
   array (
     'cakephp/app' => 
     array (
-      'pretty_version' => '4.2.1',
-      'version' => '4.2.1.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '582cc987f2ff00ee0b225af1d8dbea19323bbb83',
     ),
     'cakephp/bake' => 
     array (
