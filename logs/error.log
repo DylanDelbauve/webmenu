@@ -1,0 +1,19 @@
+2021-03-30 12:03:29 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2021-03-30 12:03:29 Error: [Cake\Datasource\Exception\MissingDatasourceConfigException] The datasource configuration "debug_kit" was not found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Datasource/ConnectionManager.php on line 203
+Exception Attributes: array (
+  'name' => 'debug_kit',
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:256
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Datasource/Locator/AbstractLocator.php:62
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:205
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/ToolbarService.php:258
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:66
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /
+
+
