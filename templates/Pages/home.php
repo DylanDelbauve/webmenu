@@ -58,6 +58,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <?= $this->Html->link('Aller aux allergènes', '/allergens', ['class' => 'button']) ?>
     <?= $this->Html->link('Aller aux plats', '/dishes', ['class' => 'button']) ?>
     <?= $this->Html->link('Aller aux types de plat', '/dishtypes', ['class' => 'button']) ?>
+    <?= $this->Html->link('Aller aux menus', '/menus', ['class' => 'button']) ?>
 
 </body>
 

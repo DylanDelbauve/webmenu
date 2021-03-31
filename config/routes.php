@@ -103,6 +103,21 @@ $routes->scope('/', function (RouteBuilder $builder) {
             ->setPass(['id']);
     });
 
+    $builder->scope('/menus', function (RouteBuilder $builder) 
+    {
+        $builder->connect('/', ['controller' => 'Menus', 'action' => 'index']);
+        $builder->connect('/add', ['controller' => 'Menus', 'action' => 'add']);
+        $builder->connect('/edit/{id}', ['controller' => 'Menus', 'action' => 'edit'])
+            ->setPatterns(['id' => '\d+'])
+            ->setPass(['id']);
+        $builder->connect('/get/{id}', ['controller' => 'Menus', 'action' => 'view'])
+            ->setPatterns(['id' => '\d+'])
+            ->setPass(['id']);
+        $builder->connect('/delete/{id}', ['controller' => 'Menus', 'action' => 'delete'])
+            ->setPatterns(['id' => '\d+'])
+            ->setPass(['id']);
+    });
+
     $builder->connect('/pages/*', 'Pages::display');
 
     /*
