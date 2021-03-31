@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Routes configuration.
  *
@@ -41,6 +42,7 @@ use Cake\Routing\RouteBuilder;
  * inconsistently cased URLs when used with `:plugin`, `:controller` and
  * `:action` markers.
  */
+
 /** @var \Cake\Routing\RouteBuilder $routes */
 $routes->setRouteClass(DashedRoute::class);
 
@@ -58,9 +60,15 @@ $routes->scope('/', function (RouteBuilder $builder) {
     $builder->connect('/pages/*', 'Pages::display');
     $builder->connect('/allergens', ['controller' => 'Allergens', 'action' => 'index']);
     $builder->connect('/allergens/add', ['controller' => 'Allergens', 'action' => 'add']);
-    $builder->connect('/allergens/edit/*', ['controller' => 'Allergens', 'action' => 'edit']);
-    $builder->connect('/allergens/get/*', ['controller' => 'Allergens', 'action' => 'view']);
-    $builder->connect('/allergens/delete/*', ['controller' => 'Allergens', 'action' => 'delete']);
+    $builder->connect('/allergens/edit/{id}', ['controller' => 'Allergens', 'action' => 'edit'])
+        ->setPatterns(['id' => '\d+'])
+        ->setPass(['id']);
+    $builder->connect('/allergens/get/{id}', ['controller' => 'Allergens', 'action' => 'view'])
+        ->setPatterns(['id' => '\d+'])
+        ->setPass(['id']);
+    $builder->connect('/allergens/delete/{id}', ['controller' => 'Allergens', 'action' => 'delete'])
+        ->setPatterns(['id' => '\d+'])
+        ->setPass(['id']);
 
     /*
      * Connect catchall routes for all controllers.
