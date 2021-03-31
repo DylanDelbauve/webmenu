@@ -87,6 +87,22 @@ $routes->scope('/', function (RouteBuilder $builder) {
             ->setPatterns(['id' => '\d+'])
             ->setPass(['id']);
     });
+
+    $builder->scope('/dishes', function (RouteBuilder $builder) 
+    {
+        $builder->connect('/', ['controller' => 'Dishes', 'action' => 'index']);
+        $builder->connect('/add', ['controller' => 'Dishes', 'action' => 'add']);
+        $builder->connect('/edit/{id}', ['controller' => 'Dishes', 'action' => 'edit'])
+            ->setPatterns(['id' => '\d+'])
+            ->setPass(['id']);
+        $builder->connect('/get/{id}', ['controller' => 'Dishes', 'action' => 'view'])
+            ->setPatterns(['id' => '\d+'])
+            ->setPass(['id']);
+        $builder->connect('/delete/{id}', ['controller' => 'Dishes', 'action' => 'delete'])
+            ->setPatterns(['id' => '\d+'])
+            ->setPass(['id']);
+    });
+
     $builder->connect('/pages/*', 'Pages::display');
 
     /*
