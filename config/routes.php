@@ -56,6 +56,11 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * ...and connect the rest of 'Pages' controller's URLs.
      */
     $builder->connect('/pages/*', 'Pages::display');
+    $builder->connect('/allergens', ['controller' => 'Allergens', 'action' => 'index']);
+    $builder->connect('/allergens/add', ['controller' => 'Allergens', 'action' => 'add']);
+    $builder->connect('/allergens/edit/*', ['controller' => 'Allergens', 'action' => 'edit']);
+    $builder->connect('/allergens/get/*', ['controller' => 'Allergens', 'action' => 'view']);
+    $builder->connect('/allergens/delete/*', ['controller' => 'Allergens', 'action' => 'delete']);
 
     /*
      * Connect catchall routes for all controllers.
