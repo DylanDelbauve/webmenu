@@ -1,0 +1,1 @@
+<?= h($dishtype->type) ?>

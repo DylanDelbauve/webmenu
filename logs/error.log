@@ -1397,3 +1397,230 @@ Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
 Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
 [main] - ROOT/webroot/index.php, line 40
 
+2021-03-31 12:35:09 Error: [Cake\ORM\Exception\MissingTableClassException] Table class for alias `DishTypes` could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php on line 245
+Exception Attributes: array (
+  0 => 'for alias `DishTypes`',
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Datasource/Locator/AbstractLocator.php:62
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/ORM/Locator/TableLocator.php:205
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Datasource/ModelAwareTrait.php:124
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:307
+- /home/jyka/Documents/GitHub/web-menu/src/Controller/DishTypesController.php:11
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:531
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:151
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /dishtypes
+
+
+2021-03-31 12:36:03 Error: [Cake\View\Exception\MissingTemplateException] Template file `DishTypes/index.php` could not be found.
+
+The following paths were searched:
+
+- `/home/jyka/Documents/GitHub/web-menu/templates/DishTypes/index.php`
+- `/home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/templates/DishTypes/index.php`
+ in DishTypes/index.php on line 1354
+Exception Attributes: array (
+  'file' => 'DishTypes/index.php',
+  'paths' => 
+  array (
+    0 => '/home/jyka/Documents/GitHub/web-menu/templates/',
+    1 => '/home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/templates/',
+  ),
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/View/View.php:761
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:699
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:540
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:151
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /dishtypes
+
+
+2021-03-31 12:37:31 Warning: Warning (2): Undefined variable $dishtypes in [/home/jyka/Documents/GitHub/web-menu/templates/DishTypes/index.php, line 11]
+Request URL: /dishtypes
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+include - ROOT/templates/DishTypes/index.php, line 11
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1176
+Cake\View\View::_render() - CORE/src/View/View.php, line 1134
+Cake\View\View::render() - CORE/src/View/View.php, line 764
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 699
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 540
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 151
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 313
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 161
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 126
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+2021-03-31 12:37:31 Warning: Warning (2): foreach() argument must be of type array|object, null given in [/home/jyka/Documents/GitHub/web-menu/templates/DishTypes/index.php, line 11]
+Request URL: /dishtypes
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+include - ROOT/templates/DishTypes/index.php, line 11
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1176
+Cake\View\View::_render() - CORE/src/View/View.php, line 1134
+Cake\View\View::render() - CORE/src/View/View.php, line 764
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 699
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 540
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 151
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 313
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 169
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 161
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 126
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+2021-03-31 12:38:52 Error: [Cake\Controller\Exception\MissingActionException] Action DishTypesController::add() could not be found, or is not accessible. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'DishTypesController',
+  'action' => 'add',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:100
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /dishtypes/add
+Referer URL: http://localhost:8765/dishtypes
+
+
+2021-03-31 12:39:47 Error: [Cake\Controller\Exception\MissingActionException] Action DishTypesController::add() could not be found, or is not accessible. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'DishTypesController',
+  'action' => 'add',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:100
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /dishtypes/add
+Referer URL: http://localhost:8765/dishtypes
+
+
+2021-03-31 12:41:07 Error: [Cake\Controller\Exception\MissingActionException] Action DishTypesController::edit() could not be found, or is not accessible. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php on line 510
+Exception Attributes: array (
+  'controller' => 'DishTypesController',
+  'action' => 'edit',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:100
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:169
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /dishtypes/edit/1
+Referer URL: http://localhost:8765/dishtypes
+
+

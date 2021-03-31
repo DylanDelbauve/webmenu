@@ -57,18 +57,37 @@ $routes->scope('/', function (RouteBuilder $builder) {
     /*
      * ...and connect the rest of 'Pages' controller's URLs.
      */
+
+    $builder->scope('/allergens', function (RouteBuilder $builder) 
+    {
+        $builder->connect('/', ['controller' => 'Allergens', 'action' => 'index']);
+        $builder->connect('/add', ['controller' => 'Allergens', 'action' => 'add']);
+        $builder->connect('/edit/{id}', ['controller' => 'Allergens', 'action' => 'edit'])
+            ->setPatterns(['id' => '\d+'])
+            ->setPass(['id']);
+        $builder->connect('/get/{id}', ['controller' => 'Allergens', 'action' => 'view'])
+            ->setPatterns(['id' => '\d+'])
+            ->setPass(['id']);
+        $builder->connect('/delete/{id}', ['controller' => 'Allergens', 'action' => 'delete'])
+            ->setPatterns(['id' => '\d+'])
+            ->setPass(['id']);
+    });
+
+    $builder->scope('/dishtypes', function (RouteBuilder $builder) 
+    {
+        $builder->connect('/', ['controller' => 'DishTypes', 'action' => 'index']);
+        $builder->connect('/add', ['controller' => 'DishTypes', 'action' => 'add']);
+        $builder->connect('/edit/{id}', ['controller' => 'DishTypes', 'action' => 'edit'])
+            ->setPatterns(['id' => '\d+'])
+            ->setPass(['id']);
+        $builder->connect('/get/{id}', ['controller' => 'DishTypes', 'action' => 'view'])
+            ->setPatterns(['id' => '\d+'])
+            ->setPass(['id']);
+        $builder->connect('/delete/{id}', ['controller' => 'DishTypes', 'action' => 'delete'])
+            ->setPatterns(['id' => '\d+'])
+            ->setPass(['id']);
+    });
     $builder->connect('/pages/*', 'Pages::display');
-    $builder->connect('/allergens', ['controller' => 'Allergens', 'action' => 'index']);
-    $builder->connect('/allergens/add', ['controller' => 'Allergens', 'action' => 'add']);
-    $builder->connect('/allergens/edit/{id}', ['controller' => 'Allergens', 'action' => 'edit'])
-        ->setPatterns(['id' => '\d+'])
-        ->setPass(['id']);
-    $builder->connect('/allergens/get/{id}', ['controller' => 'Allergens', 'action' => 'view'])
-        ->setPatterns(['id' => '\d+'])
-        ->setPass(['id']);
-    $builder->connect('/allergens/delete/{id}', ['controller' => 'Allergens', 'action' => 'delete'])
-        ->setPatterns(['id' => '\d+'])
-        ->setPass(['id']);
 
     /*
      * Connect catchall routes for all controllers.
