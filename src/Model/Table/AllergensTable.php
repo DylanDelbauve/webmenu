@@ -7,13 +7,8 @@ use Cake\ORM\Table;
 
 class AllergensTable extends Table
 {
-    /*public function beforeSave($event, $entity, $options)
+    public function initialize(array $config): void
     {
-        if ($entity->isNew() && !$entity->slug) {
-            $sluggedTitle = Text::slug($entity->title);
-            // On ne garde que le nombre de caractère correspondant à la longueur
-            // maximum définie dans notre schéma
-            $entity->slug = substr($sluggedTitle, 0, 191);
-        }
-    }*/
+        $this->belongsToMany('Dishes');
+    }
 }

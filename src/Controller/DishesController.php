@@ -16,7 +16,7 @@ class DishesController extends AppController
 
     public function view($id = null)
     {
-        $dish = $this->Dishes->findById($id)->firstOrFail();
+        $dish = $this->Dishes->findById($id)->contain(['Allergens'])->firstOrFail();
         $this->set(compact('dish'));
     }
 
@@ -75,5 +75,33 @@ class DishesController extends AppController
             $this->Flash->success(__('Le plat {0} a été supprimé.', $dish->name));
             return $this->redirect(['action' => 'index']);
         }
+    }
+
+    public function editallergens($id)
+    {
+        $dish = $this->Dishes->findById($id)->contain(['Allergens'])->firstOrFail();
+
+        $allergensTable = TableRegistry::getTableLocator()->get('Allergens');
+        $allergens = $allergensTable->find('all')->toArray();
+        $this->set('allergens', $allergens);
+
+        if ($this->request->is(['post', 'put'])) {
+            $allergensAdded = array();
+            foreach ($this->request->getData() as $id) {
+                foreach ($allergens as $allergen) {
+                    if($allergen->id == $id)
+                    array_push($allergensAdded, $allergen);
+                }
+            }
+            $dish->allergens = $allergensAdded;
+            if ($this->Dishes->save($dish)) {
+                $this->Flash->success(__('Votre plat a été mis à jour.'));
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('Impossible de mettre à jour le plat.'));
+        }
+
+        $this->set('dish', $dish);
+
     }
 }
