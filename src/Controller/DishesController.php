@@ -7,6 +7,7 @@ use Cake\ORM\TableRegistry;
 
 class DishesController extends AppController
 {
+    
     public function index()
     {
         $this->loadComponent('Paginator');
@@ -96,7 +97,7 @@ class DishesController extends AppController
             $dish->allergens = $allergensAdded;
             if ($this->Dishes->save($dish)) {
                 $this->Flash->success(__('Votre plat a été mis à jour.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'get', $dish->id]);
             }
             $this->Flash->error(__('Impossible de mettre à jour le plat.'));
         }

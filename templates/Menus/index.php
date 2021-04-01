@@ -3,18 +3,22 @@
 
 <table>
     <tr>
+        <th>Date</th>
         <th>Nom menu</th>
-        <th>Modifier</th>
-        <th>Supprimer</th>
+        <th></th>
+        <th></th>
     </tr>
 
     <?php foreach ($menus as $menu): ?>
     <tr>
         <td>
+            <?= h($menu->date) ?>
+        </td>
+        <td>
             <?= $this->Html->link($menu->name, ['action' => 'view', $menu->id]) ?>
         </td>
         <td>
-            <?= $this->Html->link('Modifier', ['action' => 'edit', $menu->id]) ?>        
+            <?= $this->Html->link('Voir', ['action' => 'view', $menu->id]) ?>        
         </td>
         <td>
             <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $menu->id],['confirm' => 'Êtes-vous sûr ?']) ?>        

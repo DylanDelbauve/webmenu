@@ -13,4 +13,4 @@
     <?php endif; ?>
 </ul>
 
-<?= $this->Html->link('Modifier les allergènes', ['action' => 'editallergens',$dish->id]) ?>
+<?= $this->Html->link('Modifier les allergènes', ['action' => 'editallergens',$dish->id], ['class' => 'button']) ?>

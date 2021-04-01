@@ -98,9 +98,6 @@ $routes->scope('/', function (RouteBuilder $builder) {
         $builder->connect('/get/{id}', ['controller' => 'Dishes', 'action' => 'view'])
             ->setPatterns(['id' => '\d+'])
             ->setPass(['id']);
-        $builder->connect('/editallergens/{id}', ['controller' => 'Dishes', 'action' => 'editallergens'])
-            ->setPatterns(['id' => '\d+'])
-            ->setPass(['id']);
         $builder->connect('/delete/{id}', ['controller' => 'Dishes', 'action' => 'delete'])
             ->setPatterns(['id' => '\d+'])
             ->setPass(['id']);
