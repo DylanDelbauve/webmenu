@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
+use Cake\I18n\Date;
 
 class MenusController extends AppController
 {
@@ -85,6 +86,16 @@ class MenusController extends AppController
             $this->Flash->error(__('Impossible de mettre à jour le menu.'));
         }
 
+        $this->set('menu', $menu);
+    }
+
+    public function show() {
+        Date::setJsonEncodeFormat('yyyy-MM-dd');
+        $date = Date::now();
+        //$date->modify('+1 days');
+
+        $query = $this->Menus->find()->contain(['Dishes', 'Dishes.DishTypes', 'Dishes.Allergens'])->where(['Menus.date =' => $date]);
+        $menu = $query->first();
         $this->set('menu', $menu);
     }
 }

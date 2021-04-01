@@ -15,9 +15,9 @@ class DishesController extends AppController
         $this->set(compact('dishes'));
     }
 
-    public function view($id = null)
+    public function view($id)
     {
-        $dish = $this->Dishes->findById($id)->contain(['Allergens'])->firstOrFail();
+        $dish = $this->Dishes->findById($id)->contain(['Allergens', 'DishTypes'])->first();
         $this->set(compact('dish'));
     }
 
@@ -27,7 +27,7 @@ class DishesController extends AppController
         $query = $dishTypesTable->find()->toArray();
         $dishtypes = array();
         foreach ($query as $value) {
-            $dishtypes[$value->id] = $value->type;
+            $dishtypes[$value->id] = $value->name;
         };
         $this->set('dishtypes', $dishtypes);
 
@@ -50,11 +50,11 @@ class DishesController extends AppController
         $query = $dishTypesTable->find()->toArray();
         $dishtypes = array();
         foreach ($query as $value) {
-            $dishtypes[$value->id] = $value->type;
+            $dishtypes[$value->id] = $value->name;
         };
         $this->set('dishtypes', $dishtypes);
 
-        $dish = $this->Dishes->findById($id)->firstOrFail();
+        $dish = $this->Dishes->findById($id)->contain('DishTypes')->firstOrFail();
         if ($this->request->is(['post', 'put'])) {
             $this->Dishes->patchEntity($dish, $this->request->getData());
             if ($this->Dishes->save($dish)) {

@@ -1,4 +1,4 @@
-<h1><?= h($dish->name) ?></h1>
+<h1><?= h($dish->name) ?> (<?= h($dish->dish_type->name) ?>)</h1>
 <h2><?= h($dish->description) ?></h2>
 
 

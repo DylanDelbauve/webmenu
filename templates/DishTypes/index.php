@@ -11,7 +11,7 @@
     <?php foreach ($dishtypes as $dishtype): ?>
     <tr>
         <td>
-            <?= $this->Html->link($dishtype->type, ['action' => 'view', $dishtype->id]) ?>
+            <?= $dishtype->name ?>
         </td>
         <td>
             <?= $this->Html->link('Modifier', ['action' => 'edit', $dishtype->id]) ?>        

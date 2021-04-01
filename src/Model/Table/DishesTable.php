@@ -10,5 +10,6 @@ class DishesTable extends Table
     {
         $this->belongsToMany('Allergens');
         $this->belongsToMany('Menus');
+        $this->belongsTo('DishTypes');
     }
 }
