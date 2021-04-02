@@ -1,6 +1,7 @@
 <h1>Menu</h1>
 <?= $this->Html->link('Ajouter un menu', ['action' => 'add']) ?>
 
+<?= $this->Html->link('Voir le menu du jour', '/menus/show') ?>
 <table>
     <tr>
         <th>Date</th>
