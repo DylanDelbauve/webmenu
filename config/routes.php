@@ -58,8 +58,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * ...and connect the rest of 'Pages' controller's URLs.
      */
 
-    $builder->scope('/allergens', function (RouteBuilder $builder) 
-    {
+    $builder->scope('/allergens', function (RouteBuilder $builder) {
         $builder->connect('/', ['controller' => 'Allergens', 'action' => 'index']);
         $builder->connect('/add', ['controller' => 'Allergens', 'action' => 'add']);
         $builder->connect('/edit/{id}', ['controller' => 'Allergens', 'action' => 'edit'])
@@ -73,8 +72,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
             ->setPass(['id']);
     });
 
-    $builder->scope('/dishtypes', function (RouteBuilder $builder) 
-    {
+    $builder->scope('/dishtypes', function (RouteBuilder $builder) {
         $builder->connect('/', ['controller' => 'DishTypes', 'action' => 'index']);
         $builder->connect('/add', ['controller' => 'DishTypes', 'action' => 'add']);
         $builder->connect('/edit/{id}', ['controller' => 'DishTypes', 'action' => 'edit'])
@@ -88,8 +86,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
             ->setPass(['id']);
     });
 
-    $builder->scope('/dishes', function (RouteBuilder $builder) 
-    {
+    $builder->scope('/dishes', function (RouteBuilder $builder) {
         $builder->connect('/', ['controller' => 'Dishes', 'action' => 'index']);
         $builder->connect('/add', ['controller' => 'Dishes', 'action' => 'add']);
         $builder->connect('/edit/{id}', ['controller' => 'Dishes', 'action' => 'edit'])
@@ -103,8 +100,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
             ->setPass(['id']);
     });
 
-    $builder->scope('/menus', function (RouteBuilder $builder) 
-    {
+    $builder->scope('/menus', function (RouteBuilder $builder) {
         $builder->connect('/', ['controller' => 'Menus', 'action' => 'index']);
         $builder->connect('/add', ['controller' => 'Menus', 'action' => 'add']);
         $builder->connect('/edit/{id}', ['controller' => 'Menus', 'action' => 'edit'])
@@ -116,6 +112,10 @@ $routes->scope('/', function (RouteBuilder $builder) {
         $builder->connect('/delete/{id}', ['controller' => 'Menus', 'action' => 'delete'])
             ->setPatterns(['id' => '\d+'])
             ->setPass(['id']);
+        $builder->connect('editdishes/{id}/', ['controller' => 'Menus', 'action' => 'editdishes'])
+            ->setPatterns(['id' => '\d+'])
+            ->setPass(['id']);
+        $builder->connect('/editdish/', ['controller' => 'Menus', 'action' => 'editdish']);
     });
 
     $builder->connect('/pages/*', 'Pages::display');

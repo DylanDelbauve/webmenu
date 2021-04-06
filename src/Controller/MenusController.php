@@ -8,6 +8,11 @@ use Cake\I18n\Date;
 
 class MenusController extends AppController
 {
+    public function initialize(): void
+    {
+        $this->loadComponent('RequestHandler');
+    }
+
     public function index()
     {
         $this->loadComponent('Paginator');
@@ -64,21 +69,32 @@ class MenusController extends AppController
 
     public function editdishes($id)
     {
-        $menu = $this->Menus->findById($id)->contain(['Dishes'])->firstOrFail();
+        $menu = $this->Menus->findById($id)->contain(['Dishes', 'Dishes.DishTypes'])->firstOrFail();
 
         $dishesTable = TableRegistry::getTableLocator()->get('Dishes');
-        $dishes = $dishesTable->find('all')->toArray();
+        $query = $dishesTable->find('all')->toArray();
+        foreach ($query as $value) {
+            $dishes[$value->id] = $value->name;
+        };
         $this->set('dishes', $dishes);
+
+        $dishTypesTable = TableRegistry::getTableLocator()->get('DishTypes');
+        $query = $dishTypesTable->find('all')->toArray();
+        foreach ($query as $value) {
+            $dishtypes[$value->id] = $value->name;
+        };
+        $this->set('dishtypes', $dishtypes);
 
         if ($this->request->is(['post', 'put'])) {
             $dishesAdded = array();
+            debug($this->request->getData());
             foreach ($this->request->getData() as $id) {
                 foreach ($dishes as $dish) {
-                    if($dish->id == $id)
-                    array_push($dishesAdded, $dish);
+                    if ($dish->id == $id)
+                        array_push($dishesAdded, $dish);
                 }
             }
-            $menu->dishes = $dishesAdded;
+            array_merge($menu->dishes, $dishesAdded);
             if ($this->Menus->save($menu)) {
                 $this->Flash->success(__('Votre menu a été mis à jour.'));
                 return $this->redirect(['action' => 'get', $menu->id]);
@@ -89,7 +105,61 @@ class MenusController extends AppController
         $this->set('menu', $menu);
     }
 
-    public function show() {
+    public function getdishes($id)
+    {
+
+        if ($this->request->is('ajax')) {
+            $this->RequestHandler->renderAs($this, 'json');
+            $this->response->withType('application/json');
+            $dishesTable = TableRegistry::getTableLocator()->get('Dishes');
+            $response = $dishesTable->find('all');
+            if ($id != 0) {
+                $id = intval($id);
+                $response = $response->where(['dish_type_id' => $id]);
+            }
+
+
+            $this->RequestHandler->respondAs('json');
+            $this->viewBuilder()->setLayout('ajax');
+
+            // Créer un contexte sites à renvoyer 
+            $this->set('dishes', $response);
+
+            // Généreration des vues de données
+            $this->set('_serialize', ['dishes']);
+        }
+    }
+
+    public function editdish()
+    {
+        $idMenu = $this->request->getData('idMenu');
+        $idDish = $this->request->getData('idDish');
+        $menu = $this->Menus->findById($idMenu)->contain(['Dishes'])->first();
+        $this->response->withType('application/json');
+        $dishesTable = TableRegistry::getTableLocator()->get('Dishes');
+        $dish = $dishesTable->get($idDish);
+        $tempArray = $menu->dishes;
+
+        if ($this->request->is('put')) {
+            array_push($tempArray, $dish);
+            $menu->dishes = $tempArray;
+        } else if ($this->request->is('delete')) {
+            for ($i = 0; $i < count($tempArray); $i++) {
+                if ($tempArray[$i]->id == $dish->id)
+                    $element = $i;
+            }
+            array_splice($tempArray, $element, 1);
+            $menu->dishes = $tempArray;
+        }
+
+        $this->Menus->save($menu);
+        $this->RequestHandler->respondAs('json');
+        $this->viewBuilder()->setLayout('ajax');
+        $this->set('_serialize', ['menus']);
+    }
+
+    public function show()
+    {
         Date::setJsonEncodeFormat('yyyy-MM-dd');
         $date = Date::now();
         //$date->modify('+1 days');
@@ -97,6 +167,6 @@ class MenusController extends AppController
         $query = $this->Menus->find()->contain(['Dishes', 'Dishes.DishTypes', 'Dishes.Allergens'])->where(['Menus.date =' => $date]);
         $menu = $query->first();
         $this->set('menu', $menu);
-        $this->viewBuilder()->setLayout("menu"); 
+        $this->viewBuilder()->setLayout("menu");
     }
 }
