@@ -1,7 +1,7 @@
-<h1>Menu</h1>
-<?= $this->Html->link('Ajouter un menu', ['action' => 'add']) ?>
+<h1>Menus</h1>
+<?= $this->Html->link('Ajouter un menu', ['action' => 'add'], ['class' => 'button']) ?>
 
-<?= $this->Html->link('Voir le menu du jour', '/menus/show') ?>
+<?= $this->Html->link('Voir le menu du jour', '/menus/show', ['class' => 'button']) ?>
 <table>
     <tr>
         <th>Date</th>
@@ -16,13 +16,13 @@
             <?= h($menu->date) ?>
         </td>
         <td>
-            <?= $this->Html->link($menu->name, ['action' => 'view', $menu->id]) ?>
+            <?= h($menu->name) ?>
         </td>
         <td>
-            <?= $this->Html->link('Voir', ['action' => 'view', $menu->id]) ?>        
+            <?= $this->Html->link('Voir', ['action' => 'view', $menu->id], ['class' => 'button']) ?>        
         </td>
         <td>
-            <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $menu->id],['confirm' => 'Êtes-vous sûr ?']) ?>        
+            <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $menu->id],['confirm' => 'Êtes-vous sûr ?', 'class' => 'button']) ?>        
         </td>
     </tr>
     <?php endforeach; ?>

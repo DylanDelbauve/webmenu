@@ -1,5 +1,5 @@
-<h1>Type de plat</h1>
-<?= $this->Html->link('Ajouter un type de plat', ['action' => 'add']) ?>
+<h1>Types de plat</h1>
+<?= $this->Html->link('Ajouter un type de plat', ['action' => 'add'], ['class' => 'button']) ?>
 
 <table>
     <tr>
@@ -14,10 +14,10 @@
             <?= $dishtype->name ?>
         </td>
         <td>
-            <?= $this->Html->link('Modifier', ['action' => 'edit', $dishtype->id]) ?>        
+            <?= $this->Html->link('Modifier', ['action' => 'edit', $dishtype->id], ['class' => 'button']) ?>        
         </td>
         <td>
-            <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $dishtype->id],['confirm' => 'Êtes-vous sûr ?']) ?>        
+            <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $dishtype->id],['confirm' => 'Êtes-vous sûr ?', 'class' => 'button']) ?>        
         </td>
     </tr>
     <?php endforeach; ?>

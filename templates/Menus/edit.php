@@ -2,7 +2,8 @@
 <?php
     echo $this->Form->create($menu);
     echo $this->Form->control('name');
-    echo $this->Form->date('date');
-    echo $this->Form->button(__('Sauvegarder le menu'));
+    echo $this->Form->date('date', ['required' => true]);
+    echo $this->Form->button(__('Sauvegarder le menu'))." ";
+    echo $this->Html->link('Retour', ['action' => 'view', $menu->id], ['class' => 'button']);
     echo $this->Form->end();
 ?>

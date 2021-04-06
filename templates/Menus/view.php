@@ -1,6 +1,9 @@
-<h1><?= h($menu->name) ?></h1>
+<h1>Menu du <?= h($menu->date) ?></h1>
 <?= $this->Html->link('Modifier', ['action' => 'edit',$menu->id], ['class' => 'button']) ?>
-<?= $this->Html->link('Ajouter des plats', ['action' => 'editdishes',$menu->id], ['class' => 'button']) ?>
+
+<?= $this->Html->link('Modifier les plats', ['action' => 'editdishes',$menu->id], ['class' => 'button']) ?>
+
+<?= $this->Html->link('Retour', ['action' => 'index'], ['class' => 'button']) ?>
 
 <ul>
     <?php if (count($menu->dishes) != 0) : ?>

@@ -1,25 +1,25 @@
-<h1>Allergenes</h1>
-<?= $this->Html->link('Ajouter un allergène', ['action' => 'add']) ?>
+<h1>Allergènes</h1>
+<?= $this->Html->link('Ajouter un allergène', ['action' => 'add'], ['class' => 'button']) ?>
 
 <table>
     <tr>
         <th>Nom allergene</th>
-        <th>Modifier</th>
-        <th>Supprimer</th>
+        <th></th>
+        <th></th>
     </tr>
 
-    <?php foreach ($allergens as $allergen): ?>
-    <tr>
-        <td>
-            <?= $this->Html->link($allergen->name, ['action' => 'view', $allergen->id]) ?>
-        </td>
-        <td>
-            <?= $this->Html->link('Modifier', ['action' => 'edit', $allergen->id]) ?>        
-        </td>
-        <td>
-            <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $allergen->id],['confirm' => 'Êtes-vous sûr ?']) ?>        
-        </td>
-    </tr>
+    <?php foreach ($allergens as $allergen) : ?>
+        <tr>
+            <td>
+                <?= h($allergen->name) ?>
+            </td>
+            <td>
+                <?= $this->Html->link('Modifier', ['action' => 'edit', $allergen->id], ['class' => 'button']) ?>
+            </td>
+            <td>
+                <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $allergen->id], ['confirm' => 'Êtes-vous sûr ?', 'class' => 'button']) ?>
+            </td>
+        </tr>
     <?php endforeach; ?>
 
 </table>

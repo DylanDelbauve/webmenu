@@ -13,12 +13,6 @@ class AllergensController extends AppController
         $this->set(compact('allergens'));
     }
 
-    public function view($id = null)
-    {
-        $allergen = $this->Allergens->findById($id)->firstOrFail();
-        $this->set(compact('allergen'));
-    }
-
     public function add()
     {
         $allergen = $this->Allergens->newEmptyEntity();

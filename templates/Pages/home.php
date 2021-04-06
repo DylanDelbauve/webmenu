@@ -46,7 +46,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-    <?= $this->Html->css(['normalize.min', 'milligram.min', 'cake', 'home']) ?>
+    <?= $this->Html->css(['bootstrap.min', 'main']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -54,12 +54,36 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 </head>
 
 <body>
-    <h1>Page principale</h1>
-    <?= $this->Html->link('Aller aux allergènes', '/allergens', ['class' => 'button']) ?>
-    <?= $this->Html->link('Aller aux plats', '/dishes', ['class' => 'button']) ?>
-    <?= $this->Html->link('Aller aux types de plat', '/dishtypes', ['class' => 'button']) ?>
-    <?= $this->Html->link('Aller aux menus', '/menus', ['class' => 'button']) ?>
-    <?= $this->Html->link('Voir le menu du jour', '/menus/show', ['class' => 'button']) ?>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                    <?= $this->Html->link('Home', '/', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Plats', '/dishes', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Types de plat', '/dishtypes', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Menus', '/menus', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Allergènes', '/allergens', ['class' => 'nav-link']) ?>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid row">
+        <div class="col-lg-3">
+        </div>
+        <div class="col-xl-6"><iframe src="/menus/show" frameborder="0" width="100%" height="100%"></iframe></div>
+        <div class="col-xl-3"></div>
+
+    </div>
 </body>
 
 </html>

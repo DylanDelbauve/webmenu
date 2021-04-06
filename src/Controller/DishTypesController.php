@@ -12,12 +12,6 @@ class DishTypesController extends AppController
         $this->set(compact('dishtypes'));
     }
 
-    public function view($id = null)
-    {
-        $dishtype = $this->DishTypes->findById($id)->firstOrFail();
-        $this->set(compact('dishtype'));
-    }
-
     public function add()
     {
         $dishtype = $this->DishTypes->newEmptyEntity();
