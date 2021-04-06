@@ -18357,3 +18357,1461 @@ Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
 Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
 [main] - ROOT/webroot/index.php, line 40
 
+2021-04-06 10:26:21 Error: [Cake\Http\Exception\MissingControllerException] Controller class Menuseditdishes could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Menuseditdishes',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /menuseditdishes/1
+Referer URL: http://192.168.1.18:8765/menus/get/1
+Client IP: 192.168.1.18
+
+
+2021-04-06 10:26:25 Error: [Cake\Http\Exception\MissingControllerException] Controller class Menuseditdishes could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Menuseditdishes',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /menuseditdishes/1
+Referer URL: http://192.168.1.18:8765/menus/get/1
+Client IP: 192.168.1.18
+
+
+2021-04-06 10:30:02 Error: [Error] Call to undefined method App\View\AppView::link() in /home/jyka/Documents/GitHub/web-menu/templates/Menus/editdishes.php on line 9
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/View/View.php:1176
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/View/View.php:1134
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/View/View.php:764
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:699
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:540
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:151
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /menus/editdishes/1
+Referer URL: http://192.168.1.18:8765/menus/editdishes/1
+Client IP: 192.168.1.18
+
+
+2021-04-06 10:30:13 Error: [Error] Call to undefined method App\View\AppView::link() in /home/jyka/Documents/GitHub/web-menu/templates/Menus/editdishes.php on line 9
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/View/View.php:1176
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/View/View.php:1134
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/View/View.php:764
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:699
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:540
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:151
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /menus/editdishes/1
+Referer URL: http://192.168.1.18:8765/menus/editdishes/1
+Client IP: 192.168.1.18
+
+
+2021-04-06 10:32:10 Error: [Error] Call to a member function success() on null in /home/jyka/Documents/GitHub/web-menu/src/Controller/MenusController.php on line 36
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:531
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:151
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /menus/add
+Referer URL: http://192.168.1.18:8765/menus/add
+Client IP: 192.168.1.18
+
+
+2021-04-06 10:34:48 Error: [Error] Call to a member function success() on null in /home/jyka/Documents/GitHub/web-menu/src/Controller/MenusController.php on line 37
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:531
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:151
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /menus/add
+Referer URL: http://192.168.1.18:8765/menus/add
+Client IP: 192.168.1.18
+
+
+2021-04-06 10:35:26 Error: [Error] Call to a member function success() on null in /home/jyka/Documents/GitHub/web-menu/src/Controller/MenusController.php on line 66
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:531
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:151
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /menus/delete/6
+Referer URL: http://192.168.1.18:8765/menus
+Client IP: 192.168.1.18
+
+
+2021-04-06 10:38:07 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "menus" in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php on line 514
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/src/Controller/MenusController.php:64
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:531
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:151
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /menus/delete/6
+Referer URL: http://192.168.1.18:8765/menus
+Client IP: 192.168.1.18
+
+
+2021-04-06 10:38:24 Error: [Error] Call to a member function success() on null in /home/jyka/Documents/GitHub/web-menu/src/Controller/MenusController.php on line 66
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:531
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:151
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /menus/delete/5
+Referer URL: http://192.168.1.18:8765/menus
+Client IP: 192.168.1.18
+
+
+2021-04-06 10:38:29 Error: [Error] Call to a member function success() on null in /home/jyka/Documents/GitHub/web-menu/src/Controller/MenusController.php on line 66
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:531
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:151
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /menus/delete/4
+Referer URL: http://192.168.1.18:8765/menus
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:00:13 Error: [TypeError] Unsupported operand types: string + string in /home/jyka/Documents/GitHub/web-menu/templates/Menus/editdishes.php on line 16
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/View/View.php:1176
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/View/View.php:1134
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/View/View.php:764
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:699
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/Controller.php:540
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:151
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:313
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /menus/editdishes/2
+Referer URL: http://192.168.1.18:8765/menus/get/2
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:00:51 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:01:20 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:03:57 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:06:33 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:08:10 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:10:40 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:11:35 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:12:18 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:13:49 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:14:44 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:14:46 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:14:48 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:15:22 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:15:25 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:15:28 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:15:49 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:17:13 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:17:20 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:17:27 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:17:37 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:17:39 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:19:40 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:19:42 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:27:39 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:27:54 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:28:28 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:28:41 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:32:56 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:33:17 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:33:56 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:37:47 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:45:07 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:46:44 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:46:51 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:47:22 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:48:02 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:51:17 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:55:21 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:57:03 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+
+2021-04-06 13:58:15 Error: [Cake\Http\Exception\MissingControllerException] Controller class Css could not be found. in /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 229
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:65
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/BaseApplication.php:311
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:161
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:126
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/jyka/Documents/GitHub/web-menu/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/jyka/Documents/GitHub/web-menu/webroot/index.php:40
+
+Request URL: /css/bootstrap.min.css.map
+Client IP: 192.168.1.18
+
+

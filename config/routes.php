@@ -112,7 +112,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
         $builder->connect('/delete/{id}', ['controller' => 'Menus', 'action' => 'delete'])
             ->setPatterns(['id' => '\d+'])
             ->setPass(['id']);
-        $builder->connect('editdishes/{id}/', ['controller' => 'Menus', 'action' => 'editdishes'])
+        $builder->connect('/editdishes/{id}', ['controller' => 'Menus', 'action' => 'editdishes'])
             ->setPatterns(['id' => '\d+'])
             ->setPass(['id']);
         $builder->connect('/editdish/', ['controller' => 'Menus', 'action' => 'editdish']);

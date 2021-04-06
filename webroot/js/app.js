@@ -6,13 +6,7 @@ function onChange() {
     traditional: false,
     type: "GET",
     success: function (response) {
-      dishes = response.dishes;
-      $("#dishes").empty();
-      dishes.forEach((element) => {
-        $("#dishes").append(
-          "<option value=" + element.id + ">" + element.name +"</option>"
-        );
-      });
+      reload();
     },
     dataType: "json",
   });
@@ -30,7 +24,7 @@ function addDish() {
       'idDish' : idDish
     }, 
     success: function () {
-      location.reload();
+      reload();
     },
     error : function(jqXHR, textStatus, errorThrown){
       console.log(jqXHR, textStatus, errorThrown);
@@ -50,7 +44,27 @@ function delDish(idDish) {
       'idDish' : idDish
     },
     success: function () {
-      location.reload();
+      reload();
+    },
+    error : function(jqXHR, textStatus, errorThrown){
+      console.log(jqXHR, textStatus, errorThrown);
+    },
+    dataType: "json",
+  });
+}
+
+function reload() {
+  var idMenu = document.getElementById("idMenu").value;
+  $.ajax({
+    url: "/menus/view/"+idMenu,
+    traditional: false,
+    type: "GET",
+    success: function (response) {
+      $("tbody").empty();
+      dishes = response.menu.dishes;
+      dishes.forEach((e)=> {
+        $("tbody").append('<tr id="'+e.id+'"><td>'+e.name+' <small><i>('+e.dish_type.name+')</i></small></td> <td><button id="'+e.id+'" onclick="delDish(this.id)">Supprimer</button></td></tr>'); 
+      })
     },
     error : function(jqXHR, textStatus, errorThrown){
       console.log(jqXHR, textStatus, errorThrown);

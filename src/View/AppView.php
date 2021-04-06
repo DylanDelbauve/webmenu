@@ -38,5 +38,6 @@ class AppView extends View
     public function initialize(): void
     {
         $this->loadHelper('Breadcrumbs');
+        $this->loadHelper('Flash');
     }
 }

@@ -22,7 +22,21 @@ class MenusController extends AppController
 
     public function view($id = null)
     {
-        $menu = $this->Menus->findById($id)->contain(['Dishes'])->firstOrFail();
+        $menu = $this->Menus->findById($id)->contain(['Dishes', 'Dishes.DishTypes'])->firstOrFail();
+
+        if ($this->request->is('ajax')) {
+            $this->RequestHandler->renderAs($this, 'json');
+            $this->response->withType('application/json');
+
+            $this->RequestHandler->respondAs('json');
+            $this->viewBuilder()->setLayout('ajax');
+
+            // Créer un contexte sites à renvoyer 
+            $this->set('menu', $menu);
+
+            // Généreration des vues de données
+            $this->set('_serialize', ['menu']);
+        }
         $this->set(compact('menu'));
     }
 
@@ -31,9 +45,9 @@ class MenusController extends AppController
         $menu = $this->Menus->newEmptyEntity();
         if ($this->request->is('post')) {
             $menu = $this->Menus->patchEntity($menu, $this->request->getData());
-
+            if ($menu->name == null)
+                $menu->name = "";
             if ($this->Menus->save($menu)) {
-                $this->Flash->success(__('Votre menu a été sauvegardé.'));
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('Impossible d\'ajouter votre menu.'));
@@ -62,7 +76,6 @@ class MenusController extends AppController
 
         $menu = $this->Menus->findById($id)->firstOrFail();
         if ($this->Menus->delete($menu)) {
-            $this->Flash->success(__('Le menu {0} a été supprimé.', $menu->name));
             return $this->redirect(['action' => 'index']);
         }
     }
