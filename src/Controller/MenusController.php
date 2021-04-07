@@ -11,6 +11,15 @@ class MenusController extends AppController
     public function initialize(): void
     {
         $this->loadComponent('RequestHandler');
+        $this->loadComponent('Authentication.Authentication');
+    }
+
+    public function beforeFilter(\Cake\Event\EventInterface $event)
+    {
+        parent::beforeFilter($event);
+        // pour tous les contrôleurs de notre application, rendre les actions
+        // index et view publiques, en ignorant la vérification d'authentification
+        $this->Authentication->addUnauthenticatedActions(['show']);
     }
 
     public function index()
