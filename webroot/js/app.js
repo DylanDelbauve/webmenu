@@ -6,7 +6,13 @@ function onChange() {
     traditional: false,
     type: "GET",
     success: function (response) {
-      reload();
+      dishes = response.dishes;
+      $("#dishes").empty();
+      dishes.forEach((element) => {
+        $("#dishes").append(
+          "<option value=" + element.id + ">" + element.name +"</option>"
+        );
+      });
     },
     dataType: "json",
   });
