@@ -15,7 +15,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Menu du jour';
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,14 +24,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
+        <?= $cakeDescription ?>
     </title>
     <?= $this->Html->meta('icon') ?>
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'milligram.min', 'cake', 'menu']) ?>
+    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'menu']) ?>
+    <?= $this->Html->script(['jquery','menu']); ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -39,13 +39,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 
 <body>
-    
-    <main class="main">
-        <div class="container">
-            <?= $this->Flash->render() ?>
-            <?= $this->fetch('content') ?>
-        </div>
-    </main>
+
+    <?= $this->Flash->render() ?>
+    <?= $this->fetch('content') ?>
     <footer>
     </footer>
 </body>

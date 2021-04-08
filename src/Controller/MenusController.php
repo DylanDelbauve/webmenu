@@ -188,7 +188,10 @@ class MenusController extends AppController
 
         $query = $this->Menus->find()->contain(['Dishes', 'Dishes.DishTypes', 'Dishes.Allergens'])->where(['Menus.date =' => $date]);
         $menu = $query->first();
+        $query = TableRegistry::getTableLocator()->get('Informations');
+        $info = $query->find()->first();
         $this->set('menu', $menu);
+        $this->set('info', $info);
         $this->viewBuilder()->setLayout("menu");
     }
 }

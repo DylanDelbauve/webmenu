@@ -23,8 +23,6 @@
                 <legend><?= __('Edit Information') ?></legend>
                 <?php
                     echo $this->Form->control('company_name');
-                    echo $this->Form->control('company_logo');
-                    echo $this->Form->control('theme_img');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

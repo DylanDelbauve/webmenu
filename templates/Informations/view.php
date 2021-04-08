@@ -23,14 +23,6 @@
                     <td><?= h($information->company_name) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Company Logo') ?></th>
-                    <td><?= h($information->company_logo) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Theme Img') ?></th>
-                    <td><?= h($information->theme_img) ?></td>
-                </tr>
-                <tr>
                     <th><?= __('Id') ?></th>
                     <td><?= $this->Number->format($information->id) ?></td>
                 </tr>

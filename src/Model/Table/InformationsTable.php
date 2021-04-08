@@ -60,18 +60,6 @@ class InformationsTable extends Table
             ->requirePresence('company_name', 'create')
             ->notEmptyString('company_name');
 
-        $validator
-            ->scalar('company_logo')
-            ->maxLength('company_logo', 255)
-            ->requirePresence('company_logo', 'create')
-            ->notEmptyString('company_logo');
-
-        $validator
-            ->scalar('theme_img')
-            ->maxLength('theme_img', 255)
-            ->requirePresence('theme_img', 'create')
-            ->notEmptyString('theme_img');
-
         return $validator;
     }
 }

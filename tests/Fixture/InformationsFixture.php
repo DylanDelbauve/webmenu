@@ -19,8 +19,6 @@ class InformationsFixture extends TestFixture
     public $fields = [
         'id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
         'company_name' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_general_ci', 'comment' => '', 'precision' => null],
-        'company_logo' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_general_ci', 'comment' => '', 'precision' => null],
-        'theme_img' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_general_ci', 'comment' => '', 'precision' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
         ],
@@ -41,8 +39,6 @@ class InformationsFixture extends TestFixture
             [
                 'id' => 1,
                 'company_name' => 'Lorem ipsum dolor sit amet',
-                'company_logo' => 'Lorem ipsum dolor sit amet',
-                'theme_img' => 'Lorem ipsum dolor sit amet',
             ],
         ];
         parent::init();
