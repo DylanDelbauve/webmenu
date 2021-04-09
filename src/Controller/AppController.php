@@ -19,7 +19,8 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Cake\Controller\Controller;
-
+use Cake\Mailer\Mailer;
+use Cake\Mailer\TransportFactory;
 /**
  * Application Controller
  *
@@ -52,5 +53,26 @@ class AppController extends Controller
          * see https://book.cakephp.org/4/en/controllers/components/form-protection.html
          */
         //$this->loadComponent('FormProtection');
+    }
+
+    public function testMail()
+    {
+        TransportFactory::setConfig('gmail', [
+            'host' => 'smtp.gmail.com',
+            'port' => 465,
+            'username' => 'dylandelbauve@gmail.com',
+            'password' => 'delbauvedy89',
+            'tls' => true,
+            'className' => 'Smtp'
+        ]);
+        $email = new Mailer('default');
+        $email->setTransport(new \Cake\Mailer\Transport\DebugTransport());
+        $email->setFrom(['dylandelbauve@gmail.com' => 'My Site'])
+            ->setTo('dylandelbauve@gmail.com')
+            ->setSubject('About')
+            ->viewBuilder()
+            ->setLayout('default')
+            ->setTemplate('default');
+        $email->deliver('Test');
     }
 }

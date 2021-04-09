@@ -1,7 +1,10 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
+
+use SplFileObject;
 
 /**
  * Informations Controller
@@ -11,6 +14,17 @@ namespace App\Controller;
  */
 class InformationsController extends AppController
 {
+
+    public function beforeMarshal(\Cake\Event\EventInterface $event, \ArrayObject $data, \ArrayObject $options)
+    {
+        if ($data['logo'] === '') {
+            unset($data['logo']);
+        }
+        if ($data['theme'] === '') {
+            unset($data['theme']);
+        }
+    }
+
     /**
      * Index method
      *
@@ -66,17 +80,26 @@ class InformationsController extends AppController
      * @return \Cake\Http\Response|null|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function edit($id = null)
+    public function edit()
     {
-        $information = $this->Informations->get($id, [
-            'contain' => [],
-        ]);
+        $information = $this->Informations->find()->first();
         if ($this->request->is(['patch', 'post', 'put'])) {
             $information = $this->Informations->patchEntity($information, $this->request->getData());
-            if ($this->Informations->save($information)) {
-                $this->Flash->success(__('The information has been saved.'));
+            $file = $this->request->getData('logo');
+            debug($file);
+            if ($file->getClientFilename() != null) {
+                unlink(WWW_ROOT . 'img/logo.svg');
+                $file->moveTo(WWW_ROOT . 'img/logo.svg');
+            }
+            $file = $this->request->getData('theme');
+            if ($file->getClientFilename() != null) {
+                unlink(WWW_ROOT . 'img/theme.jpg');
 
-                return $this->redirect(['action' => 'index']);
+                $file->moveTo(WWW_ROOT . 'img/theme.jpg');
+            }
+            if ($this->Informations->save($information)) {
+
+                return $this->redirect(['action' => '/']);
             }
             $this->Flash->error(__('The information could not be saved. Please, try again.'));
         }

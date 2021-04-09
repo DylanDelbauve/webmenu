@@ -5,25 +5,24 @@
  */
 ?>
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $information->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $information->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Informations'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-        </div>
-    </aside>
     <div class="column-responsive column-80">
         <div class="informations form content">
-            <?= $this->Form->create($information) ?>
+            <?= $this->Form->create($information,  ['type' => 'file']) ?>
             <fieldset>
                 <legend><?= __('Edit Information') ?></legend>
                 <?php
                     echo $this->Form->control('company_name');
                 ?>
+                <div>
+                    <p>Logo actuel</p>
+                    <img src="/img/logo.svg" height="64" width="64" alt="">
+                    <?php echo $this->Form->file('logo'); ?>
+                </div>
+                <div>
+                    <p>Thème actuel</p>
+                    <img src="/img/theme.jpg" height="108" width="192" alt="">
+                    <?php echo $this->Form->file('theme'); ?>
+                </div>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
             <?= $this->Form->end() ?>

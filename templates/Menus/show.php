@@ -1,6 +1,6 @@
 <div class="company">
     <img src="/img/logo.svg" height="64px" width="64px" alt="">
-    <h1>Cercle Mixte de Besançon</h1>
+    <h1><?= h($info->company_name) ?></h1>
 </div>
 <div id="main" class="container-fluid">
     <div class="row">
