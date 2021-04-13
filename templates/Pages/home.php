@@ -85,7 +85,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
     <div class="container-fluid row">
         <div class="col-lg-3">
-        <?= $this->Html->link('mail', '/mail', ['class' => 'button']) ?>
+        <?= env('SERVER_NAME'); ?>
         </div>
         <div class="col-xl-6"><iframe src="/menus/show" frameborder="0" width="100%" height="100%"></iframe></div>
         <div class="col-xl-3"></div>

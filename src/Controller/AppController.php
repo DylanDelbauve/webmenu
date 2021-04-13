@@ -55,24 +55,22 @@ class AppController extends Controller
         //$this->loadComponent('FormProtection');
     }
 
-    public function testMail()
-    {
-        TransportFactory::setConfig('gmail', [
-            'host' => 'smtp.gmail.com',
-            'port' => 465,
-            'username' => 'dylandelbauve@gmail.com',
-            'password' => 'delbauvedy89',
-            'tls' => true,
+    public function mail() {
+
+        TransportFactory::setConfig('maildev', [
+            'host' => 'localhost',
+            'port' => 1025,
+            'username' => null,
+            'password' => null,
             'className' => 'Smtp'
         ]);
-        $email = new Mailer('default');
-        $email->setTransport(new \Cake\Mailer\Transport\DebugTransport());
-        $email->setFrom(['dylandelbauve@gmail.com' => 'My Site'])
-            ->setTo('dylandelbauve@gmail.com')
-            ->setSubject('About')
-            ->viewBuilder()
-            ->setLayout('default')
-            ->setTemplate('default');
-        $email->deliver('Test');
+
+        $mail = new Mailer();
+        $mail->setEmailFormat('html')
+        ->setTo('bob@example.com')
+        ->setFrom('app@domain.com')
+        ->setTransport('maildev');
+        $mail->deliver();
     }
+
 }

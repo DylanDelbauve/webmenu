@@ -53,25 +53,12 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * to use (in this case, templates/Pages/home.php)...
      */
     $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
-    $builder->connect('/mail', ['controller' => 'App', 'action' => 'test_mail']);
+    $builder->connect('/mail', ['controller' => 'App', 'action' => 'mail']);
+    $builder->connect('/users/reset_password_token/{token}', ['controller' => 'Users', 'action' => 'reset_password_token'])->setPass(['token']);;
 
     /*
      * ...and connect the rest of 'Pages' controller's URLs.
      */
-
-    $builder->scope('/allergens', function (RouteBuilder $builder) {
-        $builder->connect('/', ['controller' => 'Allergens', 'action' => 'index']);
-        $builder->connect('/add', ['controller' => 'Allergens', 'action' => 'add']);
-        $builder->connect('/edit/{id}', ['controller' => 'Allergens', 'action' => 'edit'])
-            ->setPatterns(['id' => '\d+'])
-            ->setPass(['id']);
-        $builder->connect('/get/{id}', ['controller' => 'Allergens', 'action' => 'view'])
-            ->setPatterns(['id' => '\d+'])
-            ->setPass(['id']);
-        $builder->connect('/delete/{id}', ['controller' => 'Allergens', 'action' => 'delete'])
-            ->setPatterns(['id' => '\d+'])
-            ->setPass(['id']);
-    });
 
     $builder->scope('/dishtypes', function (RouteBuilder $builder) {
         $builder->connect('/', ['controller' => 'DishTypes', 'action' => 'index']);
