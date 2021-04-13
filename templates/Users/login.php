@@ -9,4 +9,5 @@
     </fieldset>
     <?= $this->Form->submit(__('Connexion')); ?>
     <?= $this->Form->end() ?>
+    <?= $this->Html->link('Mot de passe oublié', ['action' => 'forgotPassword'], ['class' => 'button']); ?>
 </div>

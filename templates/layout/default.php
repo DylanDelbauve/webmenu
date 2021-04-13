@@ -31,48 +31,52 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'milligram.min', 'cake']) ?>
-    <?= $this->Html->script(['app', 'jquery']); ?>
+    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'milligram.min', 'cake', 'main']) ?>
+    <?= $this->Html->script(['app', 'jquery', 'animations']); ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item">
+    <div class="wrapper">
+
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Sidebar header</h3>
+            </div>
+            <ul>
+                <li class="bar-item">
                     <?= $this->Html->link('Home', '/', ['class' => 'nav-link']) ?>
                 </li>
-                <li class="nav-item">
+                <li class="bar-item">
                     <?= $this->Html->link('Plats', '/dishes', ['class' => 'nav-link']) ?>
                 </li>
-                <li class="nav-item">
+                <li class="bar-item">
                     <?= $this->Html->link('Types de plat', '/dishtypes', ['class' => 'nav-link']) ?>
                 </li>
-                <li class="nav-item">
+                <li class="bar-item">
                     <?= $this->Html->link('Menus', '/menus', ['class' => 'nav-link']) ?>
                 </li>
-                <li class="nav-item">
+                <li class="bar-item">
                     <?= $this->Html->link('Allergènes', '/allergens', ['class' => 'nav-link']) ?>
                 </li>
-                <li class="nav-item">
+                <li class="bar-item">
                     <?= $this->Html->link('Options', '/informations/edit', ['class' => 'nav-link']) ?>
                 </li>
-                <li class="nav-item">
-                    <?= $this->Html->link('Déconnexion', '/users/logout', ['class' => 'nav-link btn btn-secondary']) ?>
+                <li class="bar-item">
+
                 </li>
-                
             </ul>
-        </div>
-    </nav>
-    <main class="main">
-        <div class="container">
-            <?= $this->Flash->render() ?>
+        </nav>
+        <div id="content">
+            <nav id="top-bar">
+                <button id="toggle-sidebar" onclick="toggleSideBar()">Menu</button><?= $this->Flash->render() ?>
+                <?= $this->Html->link('Déconnexion', '/users/logout', ['class' => 'nav-link btn btn-secondary']) ?>
+            </nav>
             <?= $this->fetch('content') ?>
         </div>
-    </main>
+    </div>
     <footer>
     </footer>
 </body>

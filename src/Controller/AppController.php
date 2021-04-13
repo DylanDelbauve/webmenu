@@ -54,23 +54,4 @@ class AppController extends Controller
          */
         //$this->loadComponent('FormProtection');
     }
-
-    public function mail() {
-
-        TransportFactory::setConfig('maildev', [
-            'host' => 'localhost',
-            'port' => 1025,
-            'username' => null,
-            'password' => null,
-            'className' => 'Smtp'
-        ]);
-
-        $mail = new Mailer();
-        $mail->setEmailFormat('html')
-        ->setTo('bob@example.com')
-        ->setFrom('app@domain.com')
-        ->setTransport('maildev');
-        $mail->deliver();
-    }
-
 }
