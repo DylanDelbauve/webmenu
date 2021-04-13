@@ -5,7 +5,7 @@
 <div id="main" class="container-fluid">
     <div class="row">
             
-            <div class="text">
+            <div class="text color">
                 <h1 id="date"></h1>
             </div>
     </div>
@@ -15,13 +15,13 @@
                 <div class="card-group">
                     <div class="card">
                         <div class="card-header">
-                            <h2>Entrée</h2>
+                            <h2 class="color">Entrées</h2>
                         </div>
                         <div class="card-body">
 
                             <?php foreach ($menu->dishes as $dish) : ?>
                                 <?php if ($dish->dish_type->name === 'Entrée') : ?>
-                                    <h4 class="card-text"><?= $dish->name ?></h4>
+                                    <h4 class="card-text color"><?= $dish->name ?></h4>
                                     <p class="allergens card-text">
                                         <?php foreach ($dish->allergens as $allergen) : ?>
                                             <?= $allergen->name ?>
@@ -33,12 +33,12 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h2>Plat</h2>
+                            <h2 class="color">Plats</h2>
                         </div>
                         <div class="card-body">
                             <?php foreach ($menu->dishes as $dish) : ?>
                                 <?php if ($dish->dish_type->name === 'Plat') : ?>
-                                    <h4 class="card-text"><?= $dish->name ?></h4>
+                                    <h4 class="card-text color"><?= $dish->name ?></h4>
                                     <p class="allergens card-text">
                                         <?php foreach ($dish->allergens as $allergen) : ?>
                                             <?= $allergen->name ?>
@@ -50,12 +50,12 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h2>Dessert</h2>
+                            <h2 class="color">Desserts</h2>
                         </div>
                         <div class="card-body">
                             <?php foreach ($menu->dishes as $dish) : ?>
                                 <?php if ($dish->dish_type->name === 'Dessert') : ?>
-                                    <h4 class="card-text"><?= $dish->name ?></h4>
+                                    <h4 class="card-text color"><?= $dish->name ?></h4>
                                     <p class="allergens card-text">
                                         <?php foreach ($dish->allergens as $allergen) : ?>
                                             <?= $allergen->name ?>
@@ -67,12 +67,19 @@
                     </div>
                 </div>
             <?php else : ?>
-                <h1>Aucun menu</h1>
+                <h1 class="color">Aucun menu</h1>
             <?php endif; ?>
         </div>
     </div>
     <div class="row">
-        <h1 class="text">Et bon appétit</h1>
+        <h1 class="text color"><?= h($info->message) ?></h1>
     </div>
 
 </div>
+
+<style>
+.color {
+    color: <?= h($info->color) ?>;
+    font-family: <?= h($info->font) ?>;
+}
+</style>

@@ -85,8 +85,10 @@ class InformationsController extends AppController
         $information = $this->Informations->find()->first();
         if ($this->request->is(['patch', 'post', 'put'])) {
             $information = $this->Informations->patchEntity($information, $this->request->getData());
+            $information->font = $this->request->getData()['font'];
+            debug($this->request->getData());
+            $information->color = $this->request->getData()['color'];
             $file = $this->request->getData('logo');
-            debug($file);
             if ($file->getClientFilename() != null) {
                 unlink(WWW_ROOT . 'img/logo.svg');
                 $file->moveTo(WWW_ROOT . 'img/logo.svg');
@@ -103,6 +105,7 @@ class InformationsController extends AppController
             }
             $this->Flash->error(__('The information could not be saved. Please, try again.'));
         }
+        
         $this->set(compact('information'));
     }
 

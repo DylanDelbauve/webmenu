@@ -10,6 +10,9 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $company_name
+ * @property string $message
+ * @property string $color
+ * @property string $font
  */
 class Information extends Entity
 {
@@ -24,5 +27,8 @@ class Information extends Entity
      */
     protected $_accessible = [
         'company_name' => true,
+        'message' => true,
+        'color' => true,
+        'font' => true,
     ];
 }

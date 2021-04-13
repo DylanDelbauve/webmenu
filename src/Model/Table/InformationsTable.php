@@ -60,6 +60,24 @@ class InformationsTable extends Table
             ->requirePresence('company_name', 'create')
             ->notEmptyString('company_name');
 
+        $validator
+            ->scalar('message')
+            ->maxLength('message', 255)
+            ->requirePresence('message', 'create')
+            ->notEmptyString('message');
+
+        $validator
+            ->scalar('color')
+            ->maxLength('color', 7)
+            ->requirePresence('color', 'create')
+            ->notEmptyString('color');
+
+        $validator
+            ->scalar('font')
+            ->maxLength('font', 7)
+            ->requirePresence('font', 'create')
+            ->notEmptyString('font');
+
         return $validator;
     }
 }

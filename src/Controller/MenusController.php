@@ -70,7 +70,6 @@ class MenusController extends AppController
         if ($this->request->is(['post', 'put'])) {
             $this->Menus->patchEntity($menu, $this->request->getData());
             if ($this->Menus->save($menu)) {
-                $this->Flash->success(__('Votre menu a été mis à jour.'));
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('Impossible de mettre à jour le menu.'));
