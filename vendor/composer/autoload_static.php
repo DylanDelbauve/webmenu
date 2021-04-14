@@ -140,6 +140,7 @@ class ComposerStaticInit659ebc9afb629b09cbaa8dbbd268ae3c
         ),
         'A' => 
         array (
+            'Authentication\\' => 15,
             'App\\Test\\' => 9,
             'App\\' => 4,
         ),
@@ -373,6 +374,10 @@ class ComposerStaticInit659ebc9afb629b09cbaa8dbbd268ae3c
         'Bake\\' => 
         array (
             0 => __DIR__ . '/..' . '/cakephp/bake/src',
+        ),
+        'Authentication\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cakephp/authentication/src',
         ),
         'App\\Test\\' => 
         array (

@@ -8,9 +8,10 @@ function onChange() {
     success: function (response) {
       dishes = response.dishes;
       $("#dishes").empty();
+      console.log(dishes);
       dishes.forEach((element) => {
         $("#dishes").append(
-          "<option value=" + element.id + ">" + element.name +"</option>"
+          "<option value=" + element.id + ">" + element.name +' <i>('+element.dish_type.name+')</i></option>'
         );
       });
     },
@@ -69,7 +70,7 @@ function reload() {
       $("tbody").empty();
       dishes = response.menu.dishes;
       dishes.forEach((e)=> {
-        $("tbody").append('<tr id="'+e.id+'"><td>'+e.name+' <small><i>('+e.dish_type.name+')</i></small></td> <td><button id="'+e.id+'" onclick="delDish(this.id)">Supprimer</button></td></tr>'); 
+        $("tbody").append('<tr id="'+e.id+'"><td>'+e.name+' <span class="badge badge-info">'+e.dish_type.name+'</span></td> <td><button class="btn btn-danger" id="'+e.id+'" onclick="delDish(this.id)">Supprimer</button></td></tr>'); 
       })
     },
     error : function(jqXHR, textStatus, errorThrown){

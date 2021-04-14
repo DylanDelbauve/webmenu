@@ -39,5 +39,19 @@ class AppView extends View
     {
         $this->loadHelper('Breadcrumbs');
         $this->loadHelper('Flash');
+        $this->loadHelper('Paginator');
+        $this->loadHelper('Time');
+        $this->Paginator->setTemplates([
+            'prevActive' => '<li class="page-item"><a href="{{url}}" class="page-link"><span aria-hidden="true">&laquo;</span></a></li>',
+            'prevDisabled' => '<li class="page-item disabled"><a href="{{url}}" class="page-link"><span aria-hidden="true">&laquo;</span></a></li>',
+            'current' => '<li class="page-item active"><a href="{{url}}" class="page-link">{{text}}</a></li>',
+            'number' => '<li class="page-item"><a href="{{url}}" class="page-link">{{text}}</a></li>',
+            'nextActive' => '<li class="page-item"><a href="{{url}}" class="page-link"><span aria-hidden="true">&raquo;</span></a></li>',
+            'nextDisabled' => '<li class="page-item disabled"><a href="{{url}}" class="page-link"><span aria-hidden="true">&raquo;</span></a></li>',
+            'sort' => '<a class="btn btn-primary" href="{{url}}">{{text}}</a>',
+            'sortAsc' => '<a class="btn btn-primary" href="{{url}}">{{text}} <span class="badge badge-light">Croissant</span></a>',
+            'sortDesc' => '<a class="btn btn-primary" href="{{url}}">{{text}} <span class="badge badge-light">Décroissant</span></a>',
+        
+        ]);
     }
 }

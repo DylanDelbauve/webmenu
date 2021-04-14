@@ -14,6 +14,11 @@ use SplFileObject;
  */
 class InformationsController extends AppController
 {
+    public function initialize(): void
+    {
+        $this->loadComponent('RequestHandler');
+        $this->loadComponent('Flash');
+    }
 
     public function beforeMarshal(\Cake\Event\EventInterface $event, \ArrayObject $data, \ArrayObject $options)
     {
@@ -32,45 +37,7 @@ class InformationsController extends AppController
      */
     public function index()
     {
-        $informations = $this->paginate($this->Informations);
-
-        $this->set(compact('informations'));
-    }
-
-    /**
-     * View method
-     *
-     * @param string|null $id Information id.
-     * @return \Cake\Http\Response|null|void Renders view
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function view($id = null)
-    {
-        $information = $this->Informations->get($id, [
-            'contain' => [],
-        ]);
-
-        $this->set(compact('information'));
-    }
-
-    /**
-     * Add method
-     *
-     * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
-     */
-    public function add()
-    {
-        $information = $this->Informations->newEmptyEntity();
-        if ($this->request->is('post')) {
-            $information = $this->Informations->patchEntity($information, $this->request->getData());
-            if ($this->Informations->save($information)) {
-                $this->Flash->success(__('The information has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The information could not be saved. Please, try again.'));
-        }
-        $this->set(compact('information'));
+        return $this->redirect(['action' => 'edit']);
     }
 
     /**
@@ -86,7 +53,6 @@ class InformationsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $information = $this->Informations->patchEntity($information, $this->request->getData());
             $information->font = $this->request->getData()['font'];
-            debug($this->request->getData());
             $information->color = $this->request->getData()['color'];
             $file = $this->request->getData('logo');
             if ($file->getClientFilename() != null) {
@@ -101,11 +67,11 @@ class InformationsController extends AppController
             }
             if ($this->Informations->save($information)) {
 
-                return $this->redirect(['action' => '/']);
+                return $this->redirect(['action' => 'edit']);
+                $this->Flash->valid(__('Modifications sauvegardées'));
             }
-            $this->Flash->error(__('The information could not be saved. Please, try again.'));
-        }
-        
+            $this->Flash->error(__('Une erreur est survenue. Veuillez réessayer'));
+        } 
         $this->set(compact('information'));
     }
 

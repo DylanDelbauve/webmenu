@@ -7,11 +7,13 @@ use Cake\ORM\TableRegistry;
 
 class DishesController extends AppController
 {
+    public $paginate = ['limit' => 10, 'orders' => ['Dishes.date' => 'asc'], 'contain' => ['DishTypes'], 'sortableFields' => ['name', 'DishTypes.name']];
     
     public function index()
     {
+        
         $this->loadComponent('Paginator');
-        $dishes = $this->Paginator->paginate($this->Dishes->find());
+        $dishes = $this->Paginator->paginate($this->Dishes->find(), $this->paginate);
         $this->set(compact('dishes'));
     }
 

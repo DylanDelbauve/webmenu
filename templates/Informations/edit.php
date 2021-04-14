@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container form">
     <h1>Informations de l'application</h1>
     <?= $this->Form->create($information,  ['type' => 'file']) ?>
     <div class="form-row">
@@ -19,9 +19,12 @@
         </div>
     </div>
     <div class="form-row">
-        <div class="form-group">
-            <p>Thème actuel</p>
-            <img src="/img/theme.jpg" height="108" width="192" alt=""><?php echo $this->Form->file('theme', ['class' => 'form-control-file']); ?>
+        <div class="form-group col-md-6">
+        <p>Thème actuel</p>
+            <img src="/img/theme.jpg" height="108" width="192" alt="">
+        </div>
+        <div class="form-group col-md-6">
+            <?php echo $this->Form->file('theme', ['class' => 'form-control-file']); ?>
         </div>
     </div>
     <div class="form-group">

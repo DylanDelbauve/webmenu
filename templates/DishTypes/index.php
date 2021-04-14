@@ -1,5 +1,14 @@
 <div class="container-fluid">
     <h1>Types de plat</h1>
+    <div class="btn-toolbar">
+        <div class="btn-group mr-2">
+            <?= $this->Html->link('Ajouter un type de plat', ['action' => 'add'], ['class' => 'btn btn-primary']) ?>
+        </div>
+        <div class="btn-group">
+            <?= $this->Paginator->sort('name', "Tri par nom") ?>
+        </div>
+    </div>
+    <br>
     <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
@@ -23,5 +32,4 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-    <?= $this->Html->link('Ajouter un type de plat', ['action' => 'add'], ['class' => 'btn btn-primary']) ?>
 </div>

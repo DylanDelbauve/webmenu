@@ -32,7 +32,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
     <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'main']) ?>
-    <?= $this->Html->script(['jquery', 'bootstrap.min','app','animations']); ?>
+    <?= $this->Html->script(['jquery', 'bootstrap.min','app']); ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
@@ -40,7 +40,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 <body>
     <nav>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -66,18 +66,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <li class="nav-item">
                         <?= $this->Html->link('Options', '/informations/edit', ['class' => 'nav-link']) ?>
                     </li>
-                    <li class="nav-item">
-                        <?= $this->Html->link('Déconnexion', '/users/logout', ['class' => 'nav-link btn btn-secondary']) ?>
-                    </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                <div class="form-inline my-2 my-lg-0">
+                <?= $this->Html->link('Déconnexion', '/users/logout', ['class' => 'btn btn-light my-2 my-sm-0']) ?>
+                </div>
             </div>
         </nav>
     </nav>
-    <main id="content">
+    <main id="content" class="container-fluid">
         <?= $this->Flash->render() ?>
         <?= $this->fetch('content') ?>
     </main>

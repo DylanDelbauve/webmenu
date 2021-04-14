@@ -146,13 +146,14 @@ class UsersController extends AppController
                 'action' => 'index',
             ]);
 
-            return $this->redirect($redirect);
+            return $this->redirect('/');
         }
         // afficher une erreur si l'utilisateur a soumis le formulaire
         // et que l'authentification a échoué
         if ($this->request->is('post') && !$result->isValid()) {
             $this->Flash->error(__('Votre identifiant ou votre mot de passe est incorrect.'));
         }
+        $this->viewBuilder()->setLayout("auth");
     }
 
     public function logout()
@@ -181,6 +182,7 @@ class UsersController extends AppController
                 $this->Flash->error(__('Adresse mail incorrect'));
             }
         }
+        $this->viewBuilder()->setLayout("auth");
     }
 
     public function generateToken($user)
