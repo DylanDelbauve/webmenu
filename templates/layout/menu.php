@@ -40,10 +40,7 @@ $cakeDescription = 'Menu du jour';
 
 <body>
 
-    <?= $this->Flash->render() ?>
     <?= $this->fetch('content') ?>
-    <footer>
-    </footer>
 </body>
 
 </html>

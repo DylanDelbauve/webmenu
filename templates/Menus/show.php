@@ -67,7 +67,7 @@
                     </div>
                 </div>
             <?php else : ?>
-                <h1 class="color">Aucun menu</h1>
+                <h1 class="text color height">Aucun menu</h1>
             <?php endif; ?>
         </div>
     </div>
