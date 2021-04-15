@@ -64,6 +64,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         <?= $this->Html->link('Allergènes', '/allergens', ['class' => 'nav-link']) ?>
                     </li>
                     <li class="nav-item">
+                        <?= $this->Html->link('Utilisateurs', '/users', ['class' => 'nav-link']) ?>
+                    </li>
+                    <li class="nav-item">
                         <?= $this->Html->link('Options', '/informations/edit', ['class' => 'nav-link']) ?>
                     </li>
                 </ul>

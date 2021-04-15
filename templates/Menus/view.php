@@ -6,7 +6,7 @@
     <?php if (count($menu->dishes) != 0) : ?>
         <ul class="list-group-flush">
             <?php foreach ($menu->dishes as $item) : ?>
-                <li class="list-group-item"><?= h($item->name) ?> <i>(<?= h($item->dish_type->name) ?>)</i></li>
+                <li class="list-group-item"><?= h($item->name) ?> <span class="badge badge-info"><?= h($item->dish_type->name) ?></span></li>
             <?php endforeach; ?>
         </ul>
     <?php else : ?>

@@ -1,40 +1,19 @@
 <?php
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
  */
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+<div class="container">
+    <h1><?= h($user->name) ?></h1>
+    <form action="">
+        <div class="form-group">
+            <input type="email" class="form-control" name="" id="" readonly value="<?= h($user->email) ?>">
         </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="users view content">
-            <h3><?= h($user->name) ?></h3>
-            <table>
-                <tr>
-                    <th><?= __('Name') ?></th>
-                    <td><?= h($user->name) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Password') ?></th>
-                    <td><?= h($user->password) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Email') ?></th>
-                    <td><?= h($user->email) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($user->id) ?></td>
-                </tr>
-            </table>
+        <div class="btn-group">
+            <?= $this->Html->link('Modifier', ['action' => 'edit', $user->id], ['class' => 'btn btn-primary']) ?>
+            <?= $this->Html->link('Retour', ['action' => 'index'], ['class' => 'btn btn-primary']) ?>
         </div>
-    </div>
+    </form>
 </div>
