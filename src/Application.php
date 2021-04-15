@@ -104,6 +104,8 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
             // https://book.cakephp.org/4/en/controllers/middleware.html#body-parser-middleware
             ->add(new BodyParserMiddleware())
 
+            ->add(new CsrfProtectionMiddleware())
+
 
             ->add(new AuthenticationMiddleware($this));
 

@@ -36,6 +36,7 @@ function addDish() {
     error : function(jqXHR, textStatus, errorThrown){
       console.log(jqXHR, textStatus, errorThrown);
     },
+    beforeSend: function(xhr){xhr.setRequestHeader('X-CSRF-Token', getCookie('csrfToken'));},
     dataType: "json",
   });
 }
@@ -56,6 +57,7 @@ function delDish(idDish) {
     error : function(jqXHR, textStatus, errorThrown){
       console.log(jqXHR, textStatus, errorThrown);
     },
+    beforeSend: function(xhr){xhr.setRequestHeader('X-CSRF-Token', getCookie('csrfToken'));},
     dataType: "json",
   });
 }
@@ -79,3 +81,27 @@ function reload() {
     dataType: "json",
   });
 }
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+/*window.confirm = (msg, callback) => {
+
+  $("#alert .modal-body").text(msg);
+  $("#alert").modal('show');
+  $("#confirm").on('click', () => {return true;});
+  $("#cancel").on('click', () => {return false;});
+}*/

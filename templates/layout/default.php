@@ -82,6 +82,25 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </main>
     <footer>
     </footer>
+
+    <div class="modal fade" id="alert" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="alertLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="alertLabel">Suppression</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+        <button id="confirm" type="button" class="btn btn-primary" data-dismiss="modal">Confirmer</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>

@@ -69,6 +69,8 @@ body {
 }
 
 .card-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   width: 50vw;
   border-radius: 25px;
   backdrop-filter: blur(13px);
