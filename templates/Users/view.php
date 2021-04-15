@@ -13,6 +13,7 @@
         </div>
         <div class="btn-group">
             <?= $this->Html->link('Modifier', ['action' => 'edit', $user->id], ['class' => 'btn btn-primary']) ?>
+            <?= $this->Html->link('Changer le mot de passe', ['action' => 'changePassword', $user->id], ['class' => 'btn btn-primary']) ?>
             <?= $this->Html->link('Retour', ['action' => 'index'], ['class' => 'btn btn-primary']) ?>
         </div>
     </form>
