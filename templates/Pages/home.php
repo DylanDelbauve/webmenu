@@ -47,14 +47,14 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
     <?= $this->Html->css(['bootstrap.min', 'main']) ?>
-    <?= $this->Html->script(['jquery', 'bootstrap.min','app']); ?>
+    <?= $this->Html->script(['jquery', 'bootstrap.min', 'app']); ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 
 <body>
-<nav>
+    <nav>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -86,14 +86,13 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
                     </li>
                 </ul>
                 <div class="form-inline my-2 my-lg-0">
-                <?= $this->Html->link('Déconnexion', '/users/logout', ['class' => 'btn btn-light my-2 my-sm-0']) ?>
+                    <?= $this->Html->link('Déconnexion', '/users/logout', ['class' => 'btn btn-light my-2 my-sm-0']) ?>
                 </div>
             </div>
         </nav>
     </nav>
-    <div class="container-fluid row">
-        <div class="col-xl-6"><iframe src="/menus/show" frameborder="0" width="100%" height="100%"></iframe></div>
-        <div class="col-xl-3"></div>
+    <div class="container-fluid">
+        <iframe src="/menus/show" frameborder="0" width="100%" height="100%"></iframe>
 
     </div>
 </body>
