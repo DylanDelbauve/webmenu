@@ -56,8 +56,8 @@ class InformationsController extends AppController
             $information->color = $this->request->getData()['color'];
             $file = $this->request->getData('logo');
             if ($file->getClientFilename() != null) {
-                unlink(WWW_ROOT . 'img/logo.svg');
-                $file->moveTo(WWW_ROOT . 'img/logo.svg');
+                unlink(WWW_ROOT . 'img/logo.png');
+                $file->moveTo(WWW_ROOT . 'img/logo.png');
             }
             $file = $this->request->getData('theme');
             if ($file->getClientFilename() != null) {
