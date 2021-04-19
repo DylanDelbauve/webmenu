@@ -22,10 +22,12 @@ class MenusController extends AppController
         $this->Authentication->addUnauthenticatedActions(['show']);
     }
 
+    public $paginate = ['limit' => 10, 'orders' => ['Menus.name' => 'asc']];
+
     public function index()
     {
         $this->loadComponent('Paginator');
-        $menus = $this->Paginator->paginate($this->Menus->find());
+        $menus = $this->Paginator->paginate($this->Menus->find(), $this->paginate);
         $this->set(compact('menus'));
     }
 
@@ -133,7 +135,7 @@ class MenusController extends AppController
             $this->RequestHandler->renderAs($this, 'json');
             $this->response->withType('application/json');
             $dishesTable = TableRegistry::getTableLocator()->get('Dishes');
-            $response = $dishesTable->find('all');
+            $response = $dishesTable->find('all')->contain('DishTypes');
             if ($id != 0) {
                 $id = intval($id);
                 $response = $response->where(['dish_type_id' => $id]);
@@ -183,8 +185,6 @@ class MenusController extends AppController
     {
         Date::setJsonEncodeFormat('yyyy-MM-dd');
         $date = Date::now();
-        //$date->modify('+1 days');
-
         $query = $this->Menus->find()->contain(['Dishes', 'Dishes.DishTypes', 'Dishes.Allergens'])->where(['Menus.date =' => $date]);
         $menu = $query->first();
         $query = TableRegistry::getTableLocator()->get('Informations');

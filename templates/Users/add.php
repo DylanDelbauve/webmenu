@@ -4,26 +4,28 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+<div class="container">
+    <h1>Ajouter un utilisateur</h1>
+    <?php echo $this->Form->create($user); ?>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <?php echo $this->Form->control('name', ['class' => 'form-control', 'label' => ['text' => 'Nom']]); ?>
         </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="users form content">
-            <?= $this->Form->create($user) ?>
-            <fieldset>
-                <legend><?= __('Add User') ?></legend>
-                <?php
-                    echo $this->Form->control('name');
-                    echo $this->Form->control('password');
-                    echo $this->Form->control('email');
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+    
+        <div class="form-group col-md-6">
+            <?php echo $this->Form->control('email', ['class' => 'form-control', 'label' => ['text' => 'Adresse mail']]); ?>
         </div>
     </div>
+
+    <div class="form-group">
+        <?php echo $this->Form->control('password', ['class' => 'form-control', 'required' => true, 'label' => ['text' => 'Mot de passe']]); ?>
+    </div>
+    <div class="btn-group form-group">
+        <?php
+        echo $this->Form->button(__('Sauvegarder l\'utilisateur'), ['class' => 'btn btn-primary']);
+        echo $this->Html->link('Retour', ['action' => 'index'], ['class' => 'btn btn-primary']);
+        ?>
+    </div>
+    <?php echo $this->Form->end(); ?>
 </div>

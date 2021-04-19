@@ -1,12 +1,15 @@
-<div class="users form">
-    <?= $this->Flash->render() ?>
-    <h3>Connexion</h3>
+<div class="container col-md-3">
+    <h1>Connexion</h1>
     <?= $this->Form->create() ?>
-    <fieldset>
-        <legend><?= __("Veuillez s'il vous plaît entrer votre nom d'utilisateur et votre mot de passe") ?></legend>
-        <?= $this->Form->control('email', ['required' => true]) ?>
-        <?= $this->Form->control('password', ['required' => true]) ?>
-    </fieldset>
-    <?= $this->Form->submit(__('Connexion')); ?>
-    <?= $this->Form->end() ?>
+    <div class="form-group">
+        <?= $this->Form->control('email', ['required' => true, 'class' => 'form-control', 'label' => false, 'placeholder' => 'Adresse mail']) ?>
+    </div>
+    <div class="form-group">
+        <?= $this->Form->control('password', ['required' => true, 'class' => 'form-control', 'label' => false, 'placeholder' => 'Mot de passe']) ?>
+    </div>
+    <div class="form-row">
+        <?= $this->Form->submit(__('Connexion'), ['class' => 'btn btn-primary col-mb-6']); ?>
+
+        <?= $this->Html->link('Mot de passe oublié', ['action' => 'forgotPassword'], ['class' => 'btn btn-link col-mb-6']); ?>
+    </div>
 </div>

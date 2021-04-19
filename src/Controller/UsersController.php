@@ -53,11 +53,13 @@ class UsersController extends AppController
      */
     public function view($id = null)
     {
+        $auth = $this->request->getSession()->read('Auth');
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
 
         $this->set(compact('user'));
+        $this->set(compact('auth'));
     }
 
     /**
@@ -76,7 +78,7 @@ class UsersController extends AppController
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__('L\'utilisateur n\'as pas pu être enregistré.'));
         }
         $this->set(compact('user'));
     }
@@ -90,18 +92,48 @@ class UsersController extends AppController
      */
     public function edit($id = null)
     {
+        $auth = $this->request->getSession()->read('Auth');
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $user = $this->Users->patchEntity($user, $this->request->getData());
-            $user->password = $this->_setPassword($user->password);
-            if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+            if ($user->id == $auth->id) {
+                $user = $this->Users->patchEntity($user, $this->request->getData());
+                if (!empty($this->request->getData('password')))
+                    $user->password = $this->_setPassword($user->password);
+                if ($this->Users->save($user)) {
+                    $this->Flash->success(__('L\'utilisateur a bien été modifié'));
 
-                return $this->redirect(['action' => 'index']);
+                    return $this->redirect(['action' => 'index']);
+                }
+                $this->Flash->error(__('L\'utilisateur n\'as pas pu être enregistré.'));
+            } else {
+                $this->Flash->error(__('L\'utilisateur n\'as pas pu être enregistré (Vous n\'êtes pas l\'utilisateur de ce compte)'));
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+        }
+        $this->set(compact('user'));
+    }
+
+    public function changePassword($id)
+    {
+        $auth = $this->request->getSession()->read('Auth');
+        $user = $this->Users->get($id, [
+            'contain' => [],
+        ]);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            if ($user->id == $auth->id) {
+                $user = $this->Users->patchEntity($user, $this->request->getData());
+                if (!empty($this->request->getData('password')))
+                    $user->password = $this->_setPassword($user->password);
+                if ($this->Users->save($user)) {
+                    $this->Flash->success(__('Le mot de passe a bien été modifié'));
+
+                    return $this->redirect(['action' => 'index']);
+                }
+                $this->Flash->error(__('Le mot de passe n\'a pas pu être enregistré'));
+            } else {
+                $this->Flash->error(__('Le mot de passe n\'a pas pu être enregistré (Vous n\'êtes pas l\'utilisateur de ce compte)'));
+            }
         }
         $this->set(compact('user'));
     }
@@ -146,13 +178,14 @@ class UsersController extends AppController
                 'action' => 'index',
             ]);
 
-            return $this->redirect($redirect);
+            return $this->redirect('/');
         }
         // afficher une erreur si l'utilisateur a soumis le formulaire
         // et que l'authentification a échoué
         if ($this->request->is('post') && !$result->isValid()) {
             $this->Flash->error(__('Votre identifiant ou votre mot de passe est incorrect.'));
         }
+        $this->viewBuilder()->setLayout("auth");
     }
 
     public function logout()
@@ -176,11 +209,12 @@ class UsersController extends AppController
                     $this->sendMail($user);
                     $this->Flash->success(__('Votre demande a été prise en charge. Veuillez vérifier votre boîte mail'));
                     return $this->redirect(['controller' => 'Users', 'action' => 'login']);
-                } 
+                }
             } else {
                 $this->Flash->error(__('Adresse mail incorrect'));
             }
         }
+        $this->viewBuilder()->setLayout("auth");
     }
 
     public function generateToken($user)
@@ -208,7 +242,8 @@ class UsersController extends AppController
         return $user;
     }
 
-    public function sendMail($user) {
+    public function sendMail($user)
+    {
         TransportFactory::setConfig('maildev', [
             'host' => 'localhost',
             'port' => 1025,
@@ -218,14 +253,19 @@ class UsersController extends AppController
         ]);
 
         $mail = new Mailer();
-        $mail->setEmailFormat('both')
+        $mail->setEmailFormat('html')
             ->setTo($user->email)
+            ->setSubject('Mot de passe oublié - NE PAS RÉPONDRE')
             ->setFrom('app@domain.com')
-            ->setTransport('maildev');
-        $mail->deliver('Reset password: http://'.env('SERVER_NAME').':8765/users/reset_password_token/'. $user->reset_password_token);
+            ->setTransport('maildev')
+            ->viewBuilder()
+            ->setVar('user', $user)
+            ->setTemplate('reset_password');
+        $mail->deliver('Reset password: http://' . env('SERVER_NAME') . ':8765/users/reset_password_token/' . $user->reset_password_token);
     }
 
-    public function resetPasswordToken($token) {        
+    public function resetPasswordToken($token)
+    {
         $user = $this->Users->findByResetPasswordToken($token)->first();
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user->password = $this->request->getData('new_password');
@@ -237,12 +277,14 @@ class UsersController extends AppController
 
                 return $this->redirect(['action' => 'home']);
             }
-            $this->Flash->error(__('The user could not be saved. Please, try again.'));
+            $this->Flash->error(__('Une erreur est survenue'));
         }
         $this->set(compact('user'));
+        $this->viewBuilder()->setLayout("auth");
     }
 
-    function validToken($token) {
+    function validToken($token)
+    {
         $expired = strtotime($token) + 86400;
         $time = strtotime("now");
         if ($time < $expired) {
@@ -250,5 +292,4 @@ class UsersController extends AppController
         }
         return false;
     }
-
 }

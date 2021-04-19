@@ -8,9 +8,10 @@ function onChange() {
     success: function (response) {
       dishes = response.dishes;
       $("#dishes").empty();
+      console.log(dishes);
       dishes.forEach((element) => {
         $("#dishes").append(
-          "<option value=" + element.id + ">" + element.name +"</option>"
+          "<option value=" + element.id + ">" + element.name +' <i>('+element.dish_type.name+')</i></option>'
         );
       });
     },
@@ -35,6 +36,7 @@ function addDish() {
     error : function(jqXHR, textStatus, errorThrown){
       console.log(jqXHR, textStatus, errorThrown);
     },
+    beforeSend: function(xhr){xhr.setRequestHeader('X-CSRF-Token', getCookie('csrfToken'));},
     dataType: "json",
   });
 }
@@ -55,6 +57,7 @@ function delDish(idDish) {
     error : function(jqXHR, textStatus, errorThrown){
       console.log(jqXHR, textStatus, errorThrown);
     },
+    beforeSend: function(xhr){xhr.setRequestHeader('X-CSRF-Token', getCookie('csrfToken'));},
     dataType: "json",
   });
 }
@@ -69,7 +72,7 @@ function reload() {
       $("tbody").empty();
       dishes = response.menu.dishes;
       dishes.forEach((e)=> {
-        $("tbody").append('<tr id="'+e.id+'"><td>'+e.name+' <small><i>('+e.dish_type.name+')</i></small></td> <td><button id="'+e.id+'" onclick="delDish(this.id)">Supprimer</button></td></tr>'); 
+        $("tbody").append('<tr id="'+e.id+'"><td>'+e.name+' <span class="badge badge-info">'+e.dish_type.name+'</span></td> <td><button class="btn btn-danger" id="'+e.id+'" onclick="delDish(this.id)">Supprimer</button></td></tr>'); 
       })
     },
     error : function(jqXHR, textStatus, errorThrown){
@@ -78,3 +81,27 @@ function reload() {
     dataType: "json",
   });
 }
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+/*window.confirm = (msg, callback) => {
+
+  $("#alert .modal-body").text(msg);
+  $("#alert").modal('show');
+  $("#confirm").on('click', () => {return true;});
+  $("#cancel").on('click', () => {return false;});
+}*/

@@ -15,7 +15,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$auth = $this->request->getSession()->read('Auth');
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,15 +24,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'milligram.min', 'cake']) ?>
-    <?= $this->Html->script(['app', 'jquery']); ?>
+    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'main']) ?>
+    <?= $this->Html->script(['jquery', 'bootstrap.min', 'app']); ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
@@ -40,9 +39,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/">Web menu</a>
+
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
                     <?= $this->Html->link('Home', '/', ['class' => 'nav-link']) ?>
                 </li>
                 <li class="nav-item">
@@ -58,23 +62,53 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <?= $this->Html->link('Allergènes', '/allergens', ['class' => 'nav-link']) ?>
                 </li>
                 <li class="nav-item">
-                    <?= $this->Html->link('Options', '/informations/edit', ['class' => 'nav-link']) ?>
+                    <?= $this->Html->link('Utilisateurs', '/users', ['class' => 'nav-link']) ?>
                 </li>
                 <li class="nav-item">
-                    <?= $this->Html->link('Déconnexion', '/users/logout', ['class' => 'nav-link btn btn-secondary']) ?>
+                    <?= $this->Html->link('Options', '/informations/edit', ['class' => 'nav-link']) ?>
                 </li>
-                
+            </ul>
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <?= h($auth->email) ?>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <?= $this->Html->link('Mon profil', ['controller' => 'Users', 'action' => 'view', $auth->id], ['class' => 'dropdown-item']) ?>
+                        <div class="dropdown-divider"></div>
+                        <?= $this->Html->link('Déconnexion', '/users/logout', ['class' => 'dropdown-item']) ?>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
-    <main class="main">
-        <div class="container">
-            <?= $this->Flash->render() ?>
-            <?= $this->fetch('content') ?>
-        </div>
+    <div class="flash">
+        <?= $this->Flash->render() ?>
+    </div>
+    <main id="content">
+        <?= $this->fetch('content') ?>
     </main>
     <footer>
     </footer>
+
+    <div class="modal fade" id="alert" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="alertLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="alertLabel">Suppression</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                    <button id="confirm" type="button" class="btn btn-primary" data-dismiss="modal">Confirmer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

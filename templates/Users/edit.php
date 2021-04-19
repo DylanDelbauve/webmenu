@@ -4,30 +4,28 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $user->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $user->id), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+<div class="container">
+    <h1>Modifier un utilisateur</h1>
+    <?php echo $this->Form->create($user); ?>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <?php 
+            $name = ['class' => 'form-control', 'label' => ['text' => 'Nom']];
+        ?>
+            <?php echo $this->Form->control('name', ['class' => 'form-control', 'label' => ['text' => 'Nom']]); ?>
         </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="users form content">
-            <?= $this->Form->create($user) ?>
-            <fieldset>
-                <legend><?= __('Edit User') ?></legend>
-                <?php
-                    echo $this->Form->control('name');;
-                    echo $this->Form->control('email');
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+    
+        <div class="form-group col-md-6">
+            <?php echo $this->Form->control('email', ['class' => 'form-control', 'label' => ['text' => 'Adresse mail']]); ?>
         </div>
     </div>
+
+    <div class="btn-group form-group">
+        <?php
+        echo $this->Form->button(__('Sauvegarder l\'utilisateur'), ['class' => 'btn btn-primary']);
+        echo $this->Html->link('Retour', ['action' => 'view', $user->id], ['class' => 'btn btn-primary']);
+        ?>
+    </div>
+    <?php echo $this->Form->end(); ?>
 </div>

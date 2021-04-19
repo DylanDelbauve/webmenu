@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '6d1f2072344986c4ebd7dc47eab469aab5c43495',
+    'reference' => 'bcc3e937c0372002a4b04e11e81fbb10443942e0',
     'name' => 'cakephp/app',
   ),
   'versions' => 
@@ -42,7 +42,16 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '6d1f2072344986c4ebd7dc47eab469aab5c43495',
+      'reference' => 'bcc3e937c0372002a4b04e11e81fbb10443942e0',
+    ),
+    'cakephp/authentication' => 
+    array (
+      'pretty_version' => '2.6.0',
+      'version' => '2.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6f6988c4ec7e86cfda2b5b571bacf1305a61354f',
     ),
     'cakephp/bake' => 
     array (
@@ -57,17 +66,17 @@ private static $installed = array (
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/cakephp' => 
     array (
-      'pretty_version' => '4.2.4',
-      'version' => '4.2.4.0',
+      'pretty_version' => '4.2.5',
+      'version' => '4.2.5.0',
       'aliases' => 
       array (
       ),
-      'reference' => '40f8c07632abcc0d6a2aeb1cec560b60e3850bbd',
+      'reference' => 'fe9a4e932d1008b65c165aea2b2ee599bd1fc3d3',
     ),
     'cakephp/cakephp-codesniffer' => 
     array (
@@ -80,46 +89,46 @@ private static $installed = array (
     ),
     'cakephp/chronos' => 
     array (
-      'pretty_version' => '2.1.1',
-      'version' => '2.1.1.0',
+      'pretty_version' => '2.1.2',
+      'version' => '2.1.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5929b743aec34b3a2f74c70c383706f7f12e2725',
+      'reference' => '1d187c71587c97520c00491f626e0f255144953e',
     ),
     'cakephp/collection' => 
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/console' => 
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/core' => 
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/database' => 
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/datasource' => 
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/debug_kit' => 
@@ -135,42 +144,42 @@ private static $installed = array (
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/filesystem' => 
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/form' => 
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/http' => 
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/i18n' => 
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/log' => 
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/migrations' => 
@@ -186,7 +195,7 @@ private static $installed = array (
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/plugin-installer' => 
@@ -211,14 +220,14 @@ private static $installed = array (
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'cakephp/validation' => 
     array (
       'replaced' => 
       array (
-        0 => '4.2.4',
+        0 => '4.2.5',
       ),
     ),
     'composer/ca-bundle' => 
@@ -232,12 +241,12 @@ private static $installed = array (
     ),
     'composer/composer' => 
     array (
-      'pretty_version' => '2.0.11',
-      'version' => '2.0.11.0',
+      'pretty_version' => '2.0.12',
+      'version' => '2.0.12.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a5a5632da0b1c2d6fa9a3b65f1f4e90d1f04abb9',
+      'reference' => '6c12ce263da71641903e399c3ce8ecb08fd375fb',
     ),
     'composer/semver' => 
     array (

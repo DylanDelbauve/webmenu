@@ -8,9 +8,9 @@ window.onload = (e) => {
 
 setInterval(() => {
   var d = new Date();
-  if (d.getHours() == 12 || d.getHours() == 0) {
+  if (d.getHours() == 11 && d.getMinutes() == 0 && d.getSeconds() == 0) {
     location.reload();
   }
-}, 18000000);
+}, 1000);
 
 //3600000
