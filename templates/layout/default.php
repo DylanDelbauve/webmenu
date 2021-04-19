@@ -15,7 +15,6 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
 $auth = $this->request->getSession()->read('Auth');
 ?>
 <!DOCTYPE html>
@@ -25,7 +24,6 @@ $auth = $this->request->getSession()->read('Auth');
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
@@ -84,8 +82,10 @@ $auth = $this->request->getSession()->read('Auth');
             </ul>
         </div>
     </nav>
-    <main id="content" class="container-fluid">
+    <div class="flash">
         <?= $this->Flash->render() ?>
+    </div>
+    <main id="content">
         <?= $this->fetch('content') ?>
     </main>
     <footer>

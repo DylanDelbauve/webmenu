@@ -1,6 +1,6 @@
 
 
-<div class="container col-3">
+<div class="container col-md-3">
     <h1>Mot de passe oublié</h1>
     <?= $this->Form->create() ?>
         <div class="input-group">
