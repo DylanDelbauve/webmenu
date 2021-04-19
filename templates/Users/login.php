@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container col-3">
     <h1>Connexion</h1>
     <?= $this->Form->create() ?>
     <div class="form-group">

@@ -16,6 +16,7 @@
  */
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
+$auth = $this->request->getSession()->read('Auth');
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,49 +33,56 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
     <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'main']) ?>
-    <?= $this->Html->script(['jquery', 'bootstrap.min','app']); ?>
+    <?= $this->Html->script(['jquery', 'bootstrap.min', 'app']); ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 
 <body>
-    <nav>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="/">Web menu</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/">Web menu</a>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <?= $this->Html->link('Home', '/', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= $this->Html->link('Plats', '/dishes', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= $this->Html->link('Types de plat', '/dishtypes', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= $this->Html->link('Menus', '/menus', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= $this->Html->link('Allergènes', '/allergens', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= $this->Html->link('Utilisateurs', '/users', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= $this->Html->link('Options', '/informations/edit', ['class' => 'nav-link']) ?>
-                    </li>
-                </ul>
-                <div class="form-inline my-2 my-lg-0">
-                <?= $this->Html->link('Déconnexion', '/users/logout', ['class' => 'btn btn-light my-2 my-sm-0']) ?>
-                </div>
-            </div>
-        </nav>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <?= $this->Html->link('Home', '/', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Plats', '/dishes', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Types de plat', '/dishtypes', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Menus', '/menus', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Allergènes', '/allergens', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Utilisateurs', '/users', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Options', '/informations/edit', ['class' => 'nav-link']) ?>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <?= h($auth->email) ?>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <?= $this->Html->link('Mon profil', ['controller' => 'Users', 'action' => 'view', $auth->id], ['class' => 'dropdown-item']) ?>
+                        <div class="dropdown-divider"></div>
+                        <?= $this->Html->link('Déconnexion', '/users/logout', ['class' => 'dropdown-item']) ?>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </nav>
     <main id="content" class="container-fluid">
         <?= $this->Flash->render() ?>
@@ -84,23 +92,23 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </footer>
 
     <div class="modal fade" id="alert" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="alertLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="alertLabel">Suppression</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      </div>
-      <div class="modal-footer">
-        <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-        <button id="confirm" type="button" class="btn btn-primary" data-dismiss="modal">Confirmer</button>
-      </div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="alertLabel">Suppression</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                    <button id="confirm" type="button" class="btn btn-primary" data-dismiss="modal">Confirmer</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 </body>
 
 </html>

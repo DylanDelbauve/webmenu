@@ -3,7 +3,11 @@
     <?= $this->Form->create($information,  ['type' => 'file']) ?>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <?php echo $this->Form->control('company_name', ['class' => 'form-control', 'label' => ['text' => 'Nom de l\'entreprise']]); ?>
+            <?php
+
+    use Cake\Core\Configure;
+
+echo $this->Form->control('company_name', ['class' => 'form-control', 'label' => ['text' => 'Nom de l\'entreprise']]); ?>
         </div>
         <div class="form-group col-md-6">
             <?php echo $this->Form->control('message', ['class' => 'form-control', 'label' => ['text' => 'Message à afficher sur le menu']]); ?>
@@ -16,7 +20,7 @@
         </div>
         <div class="form-group col-md-6">
             <p>Logo actuel</p>
-            <img src="/img/logo.svg" height="64" width="64" alt="">
+            <img src="/img/logo.png"  width="64" alt="">
         </div>
         
     </div>

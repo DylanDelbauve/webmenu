@@ -30,7 +30,7 @@ if (!Configure::read('debug')) :
     );
 endif;
 
-$cakeDescription = 'CakePHP: the rapid development PHP framework';
+$cakeDescription = 'Menu principal';
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,7 +39,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?= $cakeDescription ?>:
+        <?= $cakeDescription ?>
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
@@ -54,45 +54,53 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 </head>
 
 <body>
-    <nav>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="/">Web menu</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/">Web menu</a>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <?= $this->Html->link('Home', '/', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= $this->Html->link('Plats', '/dishes', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= $this->Html->link('Types de plat', '/dishtypes', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= $this->Html->link('Menus', '/menus', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= $this->Html->link('Allergènes', '/allergens', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= $this->Html->link('Utilisateurs', '/users', ['class' => 'nav-link']) ?>
-                    </li>
-                    <li class="nav-item">
-                        <?= $this->Html->link('Options', '/informations/edit', ['class' => 'nav-link']) ?>
-                    </li>
-                </ul>
-                <div class="form-inline my-2 my-lg-0">
-                    <?= $this->Html->link('Déconnexion', '/users/logout', ['class' => 'btn btn-light my-2 my-sm-0']) ?>
-                </div>
-            </div>
-        </nav>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <?= $this->Html->link('Home', '/', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Plats', '/dishes', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Types de plat', '/dishtypes', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Menus', '/menus', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Allergènes', '/allergens', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Utilisateurs', '/users', ['class' => 'nav-link']) ?>
+                </li>
+                <li class="nav-item">
+                    <?= $this->Html->link('Options', '/informations/edit', ['class' => 'nav-link']) ?>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <?= h($auth->email) ?>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <?= $this->Html->link('Mon profil', ['controller' => 'Users', 'action' => 'view', $auth->id], ['class' => 'dropdown-item']) ?>
+                        <div class="dropdown-divider"></div>
+                        <?= $this->Html->link('Déconnexion', '/users/logout', ['class' => 'dropdown-item']) ?>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </nav>
     <div class="container-fluid">
-        <iframe src="/menus/show" frameborder="0" width="100%" height="100%"></iframe>
+        
+        <h1>Work In Progress</h1>
 
     </div>
 </body>

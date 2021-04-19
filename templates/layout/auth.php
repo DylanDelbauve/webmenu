@@ -31,16 +31,18 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'main']) ?>
-    <?= $this->Html->script(['jquery', 'bootstrap.min','app','animations']); ?>
+    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'auth']) ?>
+    <?= $this->Html->script(['jquery', 'bootstrap.min','app']); ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 
 <body>
-    <main id="content">
+    <div class="flash">
         <?= $this->Flash->render() ?>
+    </div>
+    <main id="content">
         <?= $this->fetch('content') ?>
     </main>
     <footer>

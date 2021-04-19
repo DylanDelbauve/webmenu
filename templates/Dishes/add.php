@@ -15,7 +15,7 @@
     <div class="btn-group form-group">
         <?php
         echo $this->Form->button(__('Sauvegarder le plat'), ['class' => 'btn btn-primary']);
-        echo $this->Html->link('Retour', ['action' => 'view', $dish->id], ['class' => 'btn btn-primary']);
+        echo $this->Html->link('Retour', ['action' => 'index'], ['class' => 'btn btn-primary']);
         ?>
     </div>
     <?php echo $this->Form->end(); ?>

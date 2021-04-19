@@ -10,6 +10,9 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
+        <?php 
+            $name = ['class' => 'form-control', 'label' => ['text' => 'Nom']];
+        ?>
             <?php echo $this->Form->control('name', ['class' => 'form-control', 'label' => ['text' => 'Nom']]); ?>
         </div>
     

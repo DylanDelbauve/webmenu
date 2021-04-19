@@ -19,8 +19,8 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Cake\Controller\Controller;
-use Cake\Mailer\Mailer;
-use Cake\Mailer\TransportFactory;
+use Cake\Core\Configure;
+
 /**
  * Application Controller
  *

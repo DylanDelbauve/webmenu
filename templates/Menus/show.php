@@ -1,6 +1,6 @@
 
 <div class="company">
-    <img src="/img/logo.svg" height="64px" width="64px" alt="">
+    <img src="/img/logo.png"  width="100px" alt="">
     <h1><?= h($info->company_name) ?></h1>
 </div>
 
