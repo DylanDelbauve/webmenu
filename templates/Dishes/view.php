@@ -1,5 +1,5 @@
 <div class="container">
-    <h1><?= h($dish->name) ?> (<?= h($dish->dish_type->name) ?>)</h1>
+    <h1><?= h($dish->name) ?> <span class="badge badge-info" style="background-color :<?= '#'.substr(md5(h($dish->dish_type->name)), 0, 6); ?>;"><?= h($dish->dish_type->name) ?></span></h1>
     <h2><?= h($dish->description) ?></h2>
 
 

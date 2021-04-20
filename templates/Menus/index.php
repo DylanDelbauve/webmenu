@@ -14,7 +14,6 @@
         <thead class="thead-dark">
             <tr>
                 <th scope="col">Date</th>
-                <th scope="col">Nom menu</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -26,9 +25,6 @@
                         <?php if($this->Time->isToday($menu->date)) : ?>
                             <span class="badge badge-info">Aujourd'hui</span>
                         <?php endif; ?>
-                    </td>
-                    <td>
-                        <?= h($menu->name) ?>
                     </td>
                     <td>
                         <div class="btn-group">

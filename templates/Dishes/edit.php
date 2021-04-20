@@ -1,13 +1,8 @@
 <div class="container">
     <h1>Modifier un plat</h1>
     <?php echo $this->Form->create($dish); ?>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <?php echo $this->Form->control('name', ['class' => 'form-control', 'label' => ['text' => 'Nom du plat']]); ?>
-        </div>
-        <div class="form-group col-md-6">
-            <?php echo $this->Form->control('description', ['class' => 'form-control']); ?>
-        </div>
+    <div class="form-group">
+        <?php echo $this->Form->control('name', ['class' => 'form-control', 'label' => ['text' => 'Nom du plat']]); ?>
     </div>
     <div class="form-group">
         <?php echo $this->Form->select('dish_type', $dishtypes, ['defaults' => $dish->dish_type->name, 'class' => 'form-control']); ?>
