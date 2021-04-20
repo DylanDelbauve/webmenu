@@ -29,6 +29,7 @@
                     <td>
                         <div class="btn-group">
                             <?= $this->Html->link('Voir', ['action' => 'view', $menu->id], ['class' => 'btn btn-success']) ?>
+                            <?= $this->Html->link('PDF', ['action' => 'pdf', $menu->id], ['class' => 'btn btn-success']) ?>
                             <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $menu->id], ['confirm' => 'Êtes-vous sûr ?', 'class' => 'btn btn-danger']) ?>
                         </div>
                     </td>

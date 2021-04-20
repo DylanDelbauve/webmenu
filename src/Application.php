@@ -48,6 +48,8 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
      */
     public function bootstrap(): void
     {
+        $this->addPlugin('CakePdf');
+
         $this->addPlugin('Migrations');
 
         // Call parent to load bootstrap from files.

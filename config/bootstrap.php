@@ -81,6 +81,18 @@ try {
     exit($e->getMessage() . "\n");
 }
 
+Configure::write('CakePdf', [
+    'engine' => 'CakePdf.DomPdf',
+    'margin' => [
+        'bottom' => 10,
+        'left' => 10,
+        'right' => 10,
+        'top' => 10
+    ],
+    'orientation' => 'portrait',
+    'download' => true
+]);
+
 /*
  * Load an environment local configuration file to provide overrides to your configuration.
  * Notice: For security reasons app_local.php **should not** be included in your git repo.

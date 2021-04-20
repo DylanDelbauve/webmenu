@@ -26,6 +26,8 @@
 
         <?= $this->Html->link('Retour', ['action' => 'index'], ['class' => 'btn btn-primary']) ?>
 
+        <?= $this->Html->link('PDF', ['action' => 'pdf', $menu->id], ['class' => 'btn btn-success']) ?>
+
         <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $menu->id], ['confirm' => 'Êtes-vous sûr ?', 'class' => 'btn btn-danger']) ?>
     </div>
 </div>

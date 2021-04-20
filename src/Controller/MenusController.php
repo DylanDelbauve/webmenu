@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
 use Cake\I18n\Date;
+use Cake\Core\Configure;
 
 class MenusController extends AppController
 {
@@ -192,5 +193,23 @@ class MenusController extends AppController
         $this->set('menu', $menu);
         $this->set('info', $info);
         $this->viewBuilder()->setLayout("menu");
+    }
+
+    public function pdf($id)
+    {
+
+        $menu = $this->Menus->findById($id)->contain(['Dishes', 'Dishes.DishTypes', 'Dishes.Allergens'])->firstOrFail();
+        $this->viewBuilder()
+            ->enableAutoLayout(false)
+            ->setClassName('CakePdf.Pdf')
+            ->setOption(
+                'pdfConfig',
+                [
+                    'orientation' => 'portrait',
+                    'download' => true,
+                    'filename' => 'Menu_' . $menu->date. '.pdf'
+                ]
+            );
+        $this->set('menu', $menu);
     }
 }
