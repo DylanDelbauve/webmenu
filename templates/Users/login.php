@@ -7,9 +7,7 @@
     <div class="form-group">
         <?= $this->Form->control('password', ['required' => true, 'class' => 'form-control', 'label' => false, 'placeholder' => 'Mot de passe']) ?>
     </div>
-    <div class="form-row">
+    <div class="form-group">
         <?= $this->Form->submit(__('Connexion'), ['class' => 'btn btn-primary col-mb-6']); ?>
-
-        <?= $this->Html->link('Mot de passe oublié', ['action' => 'forgotPassword'], ['class' => 'btn btn-link col-mb-6']); ?>
     </div>
 </div>

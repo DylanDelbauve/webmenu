@@ -5,9 +5,6 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Authentication\PasswordHasher\DefaultPasswordHasher;
-use Cake\Mailer\Mailer;
-use Cake\Mailer\TransportFactory;
-use Cake\Utility\Security;
 
 /**
  * Users Controller
@@ -58,8 +55,7 @@ class UsersController extends AppController
             'contain' => [],
         ]);
 
-        $this->set(compact('user'));
-        $this->set(compact('auth'));
+        $this->set(compact('user', 'auth'));
     }
 
     /**
@@ -197,99 +193,5 @@ class UsersController extends AppController
             $this->Authentication->logout();
             return $this->redirect(['controller' => 'Users', 'action' => 'login']);
         }
-    }
-
-    public function forgotPassword()
-    {
-        if ($this->request->is('post')) {
-            $user = $this->Users->findByEmail($this->request->getData('email'))->first();
-            if ($user != null) {
-                $user = $this->generateToken($user);
-                if ($this->Users->save($user)) {
-                    $this->sendMail($user);
-                    $this->Flash->success(__('Votre demande a été prise en charge. Veuillez vérifier votre boîte mail'));
-                    return $this->redirect(['controller' => 'Users', 'action' => 'login']);
-                }
-            } else {
-                $this->Flash->error(__('Adresse mail incorrect'));
-            }
-        }
-        $this->viewBuilder()->setLayout("auth");
-    }
-
-    public function generateToken($user)
-    {
-        if (empty($user)) {
-            return null;
-        }
-        $token = "";
-        for ($i = 0; $i < 100; $i++) {
-            $d = rand(1, 100000) % 2;
-            $d ? $token .= chr(rand(33, 79)) : $token .= chr(rand(80, 126));
-        }
-
-        (rand(1, 100000) % 2) ? $token = strrev($token) : $token = $token;
-
-        // Generate hash of random string
-        $hash = Security::hash($token, 'sha256', true);;
-        for ($i = 0; $i < 20; $i++) {
-            $hash = Security::hash($hash, 'sha256', true);
-        }
-
-        $user->reset_password_token = $hash;
-        $user->token_created_at = date('Y-m-d H:i:s');
-
-        return $user;
-    }
-
-    public function sendMail($user)
-    {
-        TransportFactory::setConfig('maildev', [
-            'host' => 'localhost',
-            'port' => 1025,
-            'username' => null,
-            'password' => null,
-            'className' => 'Smtp'
-        ]);
-
-        $mail = new Mailer();
-        $mail->setEmailFormat('html')
-            ->setTo($user->email)
-            ->setSubject('Mot de passe oublié - NE PAS RÉPONDRE')
-            ->setFrom('app@domain.com')
-            ->setTransport('maildev')
-            ->viewBuilder()
-            ->setVar('user', $user)
-            ->setTemplate('reset_password');
-        $mail->deliver('Reset password: http://' . env('SERVER_NAME') . ':8765/users/reset_password_token/' . $user->reset_password_token);
-    }
-
-    public function resetPasswordToken($token)
-    {
-        $user = $this->Users->findByResetPasswordToken($token)->first();
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $user->password = $this->request->getData('new_password');
-            $user->password = $this->_setPassword($user->password);
-            $user->token_created_at = null;
-            $user->reset_password_token = null;
-            if ($this->Users->save($user)) {
-                $this->Flash->success(__('Le nouveau mot de passe a bien été enregistré'));
-
-                return $this->redirect(['action' => 'home']);
-            }
-            $this->Flash->error(__('Une erreur est survenue'));
-        }
-        $this->set(compact('user'));
-        $this->viewBuilder()->setLayout("auth");
-    }
-
-    function validToken($token)
-    {
-        $expired = strtotime($token) + 86400;
-        $time = strtotime("now");
-        if ($time < $expired) {
-            return true;
-        }
-        return false;
     }
 }
