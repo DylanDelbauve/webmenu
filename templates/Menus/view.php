@@ -11,7 +11,7 @@
                     <?php foreach ($dish->allergens as $allergen) : ?>
                         <span class="badge badge-info" style="background-color :<?= '#'.substr(md5(h($allergen->name)), 0, 6); ?>;"><?= h($allergen->name) ?></span>
                     <?php endforeach; ?>
-                    <?= $this->Html->link('Modifier allergènes', ['controller' => 'Dishes ','action' => 'editallergens', $dish->id], ['class' => 'badge badge-warning']) ?>
+                    <?= $this->Html->link('Modifier allergènes', ['controller' => 'Dishes ','action' => 'editallergens', $dish->id], ['class' => 'badge badge-success']) ?>
                 </li>
             <?php endforeach; ?>
         </ul>

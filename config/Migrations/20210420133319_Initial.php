@@ -35,18 +35,18 @@ class Initial extends AbstractMigration
             ])
             ->addIndex(
                 [
-                    'dish_id',
+                    'allergen_id',
                 ]
             )
             ->addIndex(
                 [
-                    'allergen_id',
+                    'dish_id',
                 ]
             )
             ->create();
 
         $this->table('dish_types')
-            ->addColumn('type', 'string', [
+            ->addColumn('name', 'string', [
                 'default' => null,
                 'limit' => 30,
                 'null' => false,
@@ -55,11 +55,6 @@ class Initial extends AbstractMigration
 
         $this->table('dishes')
             ->addColumn('name', 'string', [
-                'default' => null,
-                'limit' => 255,
-                'null' => false,
-            ])
-            ->addColumn('description', 'string', [
                 'default' => null,
                 'limit' => 255,
                 'null' => false,
@@ -89,22 +84,40 @@ class Initial extends AbstractMigration
             ])
             ->addIndex(
                 [
-                    'dish_id',
+                    'menu_id',
                 ]
             )
             ->addIndex(
                 [
-                    'menu_id',
+                    'dish_id',
                 ]
             )
             ->create();
 
-        $this->table('menus')
-            ->addColumn('name', 'string', [
+        $this->table('informations')
+            ->addColumn('company_name', 'string', [
                 'default' => null,
                 'limit' => 255,
                 'null' => false,
             ])
+            ->addColumn('message', 'string', [
+                'default' => null,
+                'limit' => 255,
+                'null' => false,
+            ])
+            ->addColumn('color', 'char', [
+                'default' => null,
+                'limit' => 7,
+                'null' => false,
+            ])
+            ->addColumn('font', 'string', [
+                'default' => null,
+                'limit' => 255,
+                'null' => false,
+            ])
+            ->create();
+
+        $this->table('menus')
             ->addColumn('date', 'date', [
                 'default' => null,
                 'limit' => null,
@@ -112,10 +125,28 @@ class Initial extends AbstractMigration
             ])
             ->create();
 
+        $this->table('users')
+            ->addColumn('name', 'string', [
+                'default' => null,
+                'limit' => 255,
+                'null' => true,
+            ])
+            ->addColumn('password', 'string', [
+                'default' => null,
+                'limit' => 255,
+                'null' => false,
+            ])
+            ->addColumn('email', 'string', [
+                'default' => null,
+                'limit' => 255,
+                'null' => false,
+            ])
+            ->create();
+
         $this->table('allergens_dishes')
             ->addForeignKey(
-                'dish_id',
-                'dishes',
+                'allergen_id',
+                'allergens',
                 'id',
                 [
                     'update' => 'NO_ACTION',
@@ -123,8 +154,8 @@ class Initial extends AbstractMigration
                 ]
             )
             ->addForeignKey(
-                'allergen_id',
-                'allergens',
+                'dish_id',
+                'dishes',
                 'id',
                 [
                     'update' => 'NO_ACTION',
@@ -147,8 +178,8 @@ class Initial extends AbstractMigration
 
         $this->table('dishes_menus')
             ->addForeignKey(
-                'dish_id',
-                'dishes',
+                'menu_id',
+                'menus',
                 'id',
                 [
                     'update' => 'NO_ACTION',
@@ -156,8 +187,8 @@ class Initial extends AbstractMigration
                 ]
             )
             ->addForeignKey(
-                'menu_id',
-                'menus',
+                'dish_id',
+                'dishes',
                 'id',
                 [
                     'update' => 'NO_ACTION',
@@ -178,10 +209,10 @@ class Initial extends AbstractMigration
     {
         $this->table('allergens_dishes')
             ->dropForeignKey(
-                'dish_id'
+                'allergen_id'
             )
             ->dropForeignKey(
-                'allergen_id'
+                'dish_id'
             )->save();
 
         $this->table('dishes')
@@ -191,10 +222,10 @@ class Initial extends AbstractMigration
 
         $this->table('dishes_menus')
             ->dropForeignKey(
-                'dish_id'
+                'menu_id'
             )
             ->dropForeignKey(
-                'menu_id'
+                'dish_id'
             )->save();
 
         $this->table('allergens')->drop()->save();
@@ -202,6 +233,8 @@ class Initial extends AbstractMigration
         $this->table('dish_types')->drop()->save();
         $this->table('dishes')->drop()->save();
         $this->table('dishes_menus')->drop()->save();
+        $this->table('informations')->drop()->save();
         $this->table('menus')->drop()->save();
+        $this->table('users')->drop()->save();
     }
 }
