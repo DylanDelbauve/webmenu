@@ -20,7 +20,7 @@
             <?php foreach ($allergens as $allergen) : ?>
                 <tr>
                     <td>
-                        <?= h($allergen->name) ?>
+                        <?= ucfirst(h($allergen->name)) ?>
                     </td>
                     <td>
                         <div class="btn-group">

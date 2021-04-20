@@ -5,10 +5,13 @@
     <h3>Liste des plats</h3>
     <?php if (count($menu->dishes) != 0) : ?>
         <ul class="list-group-flush">
-            <?php foreach ($menu->dishes as $item) : ?>
-                <li class="list-group-item"><?= h($item->name) ?> 
-                    <span class="badge badge-info" style="background-color :<?= '#'.substr(md5(h($item->dish_type->name)), 0, 6); ?>;"><?= h($item->dish_type->name) ?></span>
-                    <?= $this->Html->link('Allergènes', ['controller' => 'Dishes ','action' => 'editallergens', $item->id], ['class' => 'badge badge-secondary']) ?>
+            <?php foreach ($menu->dishes as $dish) : ?>
+                <li class="list-group-item"><?= ucfirst(h($dish->name)) ?> 
+                    <span class="badge badge-info" style="background-color :<?= '#'.substr(md5(h($dish->dish_type->name)), 0, 6); ?>;"><?= h($dish->dish_type->name) ?></span>
+                    <?php foreach ($dish->allergens as $allergen) : ?>
+                        <span class="badge badge-info" style="background-color :<?= '#'.substr(md5(h($allergen->name)), 0, 6); ?>;"><?= h($allergen->name) ?></span>
+                    <?php endforeach; ?>
+                    <?= $this->Html->link('Modifier allergènes', ['controller' => 'Dishes ','action' => 'editallergens', $dish->id], ['class' => 'badge badge-warning']) ?>
                 </li>
             <?php endforeach; ?>
         </ul>
