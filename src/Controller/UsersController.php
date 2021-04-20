@@ -36,9 +36,10 @@ class UsersController extends AppController
      */
     public function index()
     {
+        $auth = $this->request->getSession()->read('Auth');
         $users = $this->paginate($this->Users);
 
-        $this->set(compact('users'));
+        $this->set(compact('users', 'auth'));
     }
 
     /**
@@ -93,7 +94,7 @@ class UsersController extends AppController
             'contain' => [],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            if ($user->id == $auth->id) {
+            if ($user->id == $auth->id || $auth->id == 1) {
                 $user = $this->Users->patchEntity($user, $this->request->getData());
                 if (!empty($this->request->getData('password')))
                     $user->password = $this->_setPassword($user->password);
@@ -117,7 +118,7 @@ class UsersController extends AppController
             'contain' => [],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            if ($user->id == $auth->id) {
+            if ($user->id == $auth->id || $auth->id == 1) {
                 $user = $this->Users->patchEntity($user, $this->request->getData());
                 if (!empty($this->request->getData('password')))
                     $user->password = $this->_setPassword($user->password);
@@ -143,12 +144,21 @@ class UsersController extends AppController
      */
     public function delete($id = null)
     {
+        $auth = $this->request->getSession()->read('Auth');
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
-        if ($this->Users->delete($user)) {
-            $this->Flash->success(__('The user has been deleted.'));
+        if ($user->id == $auth->id || $auth->id == 1) {
+            if ($user->id != 1) {
+                if ($this->Users->delete($user)) {
+                    $this->Flash->success(__('L\'utilisateur a été supprimé'));
+                } else {
+                    $this->Flash->error(__('Une erreur est survenue'));
+                }
+            } else {
+                $this->Flash->error(__('Cette utilisateur ne peut pas être supprimé (Super Admin)'));
+            }
         } else {
-            $this->Flash->error(__('The user could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Vous n\'avez pas l\'autorisation de supprimer cette utilisateur'));
         }
 
         return $this->redirect(['action' => 'index']);
@@ -170,11 +180,11 @@ class UsersController extends AppController
         if ($result->isValid()) {
             // rediriger vers /articles après la connexion réussie
             $redirect = $this->request->getQuery('redirect', [
-                'controller' => 'Pages',
+                'controller' => 'Menus',
                 'action' => 'index',
             ]);
 
-            return $this->redirect('/');
+            return $this->redirect('/menus');
         }
         // afficher une erreur si l'utilisateur a soumis le formulaire
         // et que l'authentification a échoué

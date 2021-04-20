@@ -8,10 +8,10 @@ use Cake\ORM\TableRegistry;
 class DishesController extends AppController
 {
     public $paginate = ['limit' => 10, 'orders' => ['Dishes.date' => 'asc'], 'contain' => ['DishTypes'], 'sortableFields' => ['name', 'DishTypes.name']];
-    
+
     public function index()
     {
-        
+
         $this->loadComponent('Paginator');
         $dishes = $this->Paginator->paginate($this->Dishes->find(), $this->paginate);
         $this->set(compact('dishes'));
@@ -31,7 +31,6 @@ class DishesController extends AppController
         foreach ($query as $value) {
             $dishtypes[$value->id] = $value->name;
         };
-        $this->set('dishtypes', $dishtypes);
 
         $dish = $this->Dishes->newEmptyEntity();
         if ($this->request->is('post')) {
@@ -43,7 +42,7 @@ class DishesController extends AppController
             }
             $this->Flash->error(__('Impossible d\'ajouter votre plat.'));
         }
-        $this->set('dish', $dish);
+        $this->set(compact('dish', 'dishtypes'));
     }
 
     public function edit($id)
@@ -54,7 +53,6 @@ class DishesController extends AppController
         foreach ($query as $value) {
             $dishtypes[$value->id] = $value->name;
         };
-        $this->set('dishtypes', $dishtypes);
 
         $dish = $this->Dishes->findById($id)->contain('DishTypes')->firstOrFail();
         if ($this->request->is(['post', 'put'])) {
@@ -66,7 +64,7 @@ class DishesController extends AppController
             $this->Flash->error(__('Impossible de mettre à jour le plat.'));
         }
 
-        $this->set('dish', $dish);
+        $this->set(compact('dish', 'dishtypes'));
     }
 
     public function delete($id)
@@ -87,13 +85,15 @@ class DishesController extends AppController
         $allergensTable = TableRegistry::getTableLocator()->get('Allergens');
         $allergens = $allergensTable->find('all')->toArray();
         $this->set('allergens', $allergens);
+        if ($this->request->referer() != $this->request->getRequestTarget())
+            $back = $this->request->referer();
 
         if ($this->request->is(['post', 'put'])) {
             $allergensAdded = array();
             foreach ($this->request->getData() as $id) {
                 foreach ($allergens as $allergen) {
-                    if($allergen->id == $id)
-                    array_push($allergensAdded, $allergen);
+                    if ($allergen->id == $id)
+                        array_push($allergensAdded, $allergen);
                 }
             }
             $dish->allergens = $allergensAdded;
@@ -104,7 +104,6 @@ class DishesController extends AppController
             $this->Flash->error(__('Impossible de mettre à jour le plat.'));
         }
 
-        $this->set('dish', $dish);
-
+        $this->set(compact('dish'));
     }
 }

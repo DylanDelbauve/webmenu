@@ -27,13 +27,13 @@ class MenusController extends AppController
     public function index()
     {
         $this->loadComponent('Paginator');
-        $menus = $this->Paginator->paginate($this->Menus->find(), $this->paginate);
+        $menus = $this->Paginator->paginate($this->Menus->find()->order(['date' => 'DESC']), $this->paginate);
         $this->set(compact('menus'));
     }
 
     public function view($id = null)
     {
-        $menu = $this->Menus->findById($id)->contain(['Dishes', 'Dishes.DishTypes'])->firstOrFail();
+        $menu = $this->Menus->findById($id)->contain(['Dishes', 'Dishes.DishTypes', 'Dishes.Allergens'])->firstOrFail();
 
         if ($this->request->is('ajax')) {
             $this->RequestHandler->renderAs($this, 'json');

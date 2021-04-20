@@ -42,7 +42,9 @@
                     <td>
                         <div class="btn-group">
                             <?= $this->Html->link('Voir', ['action' => 'view', $user->id], ['class' => 'btn btn-success']) ?>
-                            <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $user->id], ['confirm' => 'Êtes-vous sûr ?', 'class' => 'btn btn-danger']) ?>
+                            <?php if ($auth->id == 1 && $user->id != 1) : ?>
+                                <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $user->id], ['confirm' => 'Êtes-vous sûr ?', 'class' => 'btn btn-danger']) ?>
+                            <?php endif; ?>
                         </div>
                     </td>
                 </tr>

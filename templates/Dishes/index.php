@@ -21,7 +21,7 @@
             <?php foreach ($dishes as $dish) : ?>
                 <tr>
                     <td>
-                        <?= h($dish->name) ?> <span class="badge badge-info"><?= h($dish->dish_type->name) ?></span>
+                        <?= h($dish->name) ?> <span class="badge badge-info" style="background-color :<?= '#'.substr(md5(h($dish->dish_type->name)), 0, 6); ?>;"><?= h($dish->dish_type->name) ?></span>
                     </td>
                     <td>
                         <div class="btn-group">

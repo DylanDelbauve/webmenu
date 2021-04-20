@@ -12,7 +12,7 @@
             <input type="email" class="form-control" name="" id="" readonly value="<?= h($user->email) ?>">
         </div>
         <div class="btn-group">
-        <?php if($user->id == $auth->id): ?>
+        <?php if($user->id == $auth->id || $auth->id == 1): ?>
             <?= $this->Html->link('Modifier', ['action' => 'edit', $user->id], ['class' => 'btn btn-primary']) ?>
             <?= $this->Html->link('Changer le mot de passe', ['action' => 'changePassword', $user->id], ['class' => 'btn btn-primary']) ?>
         <?php endif; ?>
