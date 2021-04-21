@@ -25,7 +25,8 @@
                     </td>
                     <td>
                         <div class="btn-group">
-                            <?= $this->Html->link('Voir', ['action' => 'view', $dish->id], ['class' => 'btn btn-success']) ?>
+                            <?= $this->Html->link('Voir', ['action' => 'view', $dish->id], ['class' => 'btn btn-primary']) ?>
+                            <?= $this->Html->link('Modifier les allergènes', ['action' => 'editallergens', $dish->id], ['class' => 'btn btn-primary']) ?>
                             <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $dish->id], ['confirm' => 'Êtes-vous sûr ?', 'class' => 'btn btn-danger']) ?>
                         </div>
                     </td>
