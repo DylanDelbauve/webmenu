@@ -17,7 +17,7 @@
     <div class="btn-group form-group">
         <?php
         echo $this->Form->button(__('Sauvegarder les modifications'), ['class' => 'btn btn-primary']);
-        echo $this->Html->link('Retour',$this->request->referer(), ['class' => 'btn btn-primary']);
+        echo $this->Html->link('Retour',['action' => 'index'], ['class' => 'btn btn-primary']);
         ?>
     </div>
 </div>

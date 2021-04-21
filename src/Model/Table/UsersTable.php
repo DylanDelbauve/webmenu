@@ -70,15 +70,6 @@ class UsersTable extends Table
             ->requirePresence('email', 'create')
             ->notEmptyString('email');
 
-        $validator
-            ->scalar('reset_password_token')
-            ->maxLength('reset_password_token', 255)
-            ->allowEmptyString('reset_password_token');
-
-        $validator
-            ->dateTime('token_created_at')
-            ->allowEmptyDateTime('token_created_at');
-
         return $validator;
     }
 

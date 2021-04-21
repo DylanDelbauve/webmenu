@@ -58,13 +58,10 @@ $cakeDescription = 'Menu principal';
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="/">Web menu</a>
+        <a class="navbar-brand" ">Web menu</a>
 
         <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <?= $this->Html->link('Home', '/', ['class' => 'nav-link']) ?>
-                </li>
                 <li class="nav-item">
                     <?= $this->Html->link('Plats', '/dishes', ['class' => 'nav-link']) ?>
                 </li>
@@ -99,9 +96,6 @@ $cakeDescription = 'Menu principal';
         </div>
     </nav>
     <div class="container-fluid">
-        
-        <h1>Work In Progress</h1>
-
     </div>
 </body>
 

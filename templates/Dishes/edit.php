@@ -2,7 +2,7 @@
     <h1>Modifier un plat</h1>
     <?php echo $this->Form->create($dish); ?>
     <div class="form-group">
-        <?php echo $this->Form->control('name', ['class' => 'form-control', 'label' => ['text' => 'Nom du plat']]); ?>
+        <?php echo $this->Form->control('name', ['class' => 'form-control', 'label' => ['text' => 'Nom du plat'], 'autocomplete' => 'off']); ?>
     </div>
     <div class="form-group">
         <?php echo $this->Form->select('dish_type', $dishtypes, ['defaults' => $dish->dish_type->name, 'class' => 'form-control']); ?>

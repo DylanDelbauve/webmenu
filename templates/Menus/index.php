@@ -24,12 +24,14 @@
                         <?= h($menu->date) ?>
                         <?php if($this->Time->isToday($menu->date)) : ?>
                             <span class="badge badge-info">Aujourd'hui</span>
+                        <?php elseif ($this->Time->isTomorrow($menu->date)): ?>
+                            <span class="badge badge-dark">Demain</span>
                         <?php endif; ?>
                     </td>
                     <td>
                         <div class="btn-group">
                             <?= $this->Html->link('Voir', ['action' => 'view', $menu->id], ['class' => 'btn btn-success']) ?>
-                            <?= $this->Html->link('PDF', ['action' => 'pdf', $menu->id], ['class' => 'btn btn-success']) ?>
+                            <?= $this->Html->link('Générer PDF', ['action' => 'pdf', $menu->id], ['class' => 'btn btn-success']) ?>
                             <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $menu->id], ['confirm' => 'Êtes-vous sûr ?', 'class' => 'btn btn-danger']) ?>
                         </div>
                     </td>

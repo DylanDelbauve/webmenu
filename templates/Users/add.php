@@ -10,11 +10,11 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <?php echo $this->Form->control('name', ['class' => 'form-control', 'label' => ['text' => 'Nom']]); ?>
+            <?php echo $this->Form->control('name', ['class' => 'form-control', 'label' => ['text' => 'Nom'], 'autocomplete' => 'off']); ?>
         </div>
     
         <div class="form-group col-md-6">
-            <?php echo $this->Form->control('email', ['class' => 'form-control', 'label' => ['text' => 'Adresse mail']]); ?>
+            <?php echo $this->Form->control('email', ['class' => 'form-control', 'label' => ['text' => 'Adresse mail'], 'autocomplete' => 'off']); ?>
         </div>
     </div>
 

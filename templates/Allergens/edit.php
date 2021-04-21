@@ -2,7 +2,7 @@
     <h1>Modifier un allergène</h1>
     <?php echo $this->Form->create($allergen); ?>
     <div class="form-group">
-        <?php echo $this->Form->control('name', ['class' => 'form-control', 'label' => ['text' => 'Nom du plat'], 'required' => true]); ?>
+        <?php echo $this->Form->control('name', ['class' => 'form-control', 'label' => ['text' => 'Nom du plat'], 'required' => true, 'autocomplete' => 'off']); ?>
     </div>
     <div class="btn-group form-group">
         <?php
