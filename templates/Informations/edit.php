@@ -15,7 +15,7 @@ echo $this->Form->control('company_name', ['class' => 'form-control', 'label' =>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="logo">Logo</label>
+            <label for="logo">Logo (format png)</label>
             <?php echo $this->Form->file('logo', ['class' => 'form-control-file']); ?>
         </div>
         <div class="form-group col-md-6">
@@ -26,7 +26,7 @@ echo $this->Form->control('company_name', ['class' => 'form-control', 'label' =>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="theme">Thème</label>
+            <label for="theme">Thème (format jpeg)</label>
             <?php echo $this->Form->file('theme', ['class' => 'form-control-file']); ?>
         </div>
         <div class="form-group col-md-6">
