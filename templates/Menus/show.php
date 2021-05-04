@@ -1,7 +1,7 @@
 
 <div class="company">
-    <img src="/img/logo.png"  width="100px" alt="">
-    <h1><?= h($info->company_name) ?></h1>
+    <img src="/img/<?= h($info['logo']) ?>"  width="100px" alt="">
+    <h1><?= h($info['company_name']) ?></h1>
 </div>
 
 <div id="main" class="container-fluid">
@@ -73,15 +73,18 @@
         <h1 class="text color height">Aucun menu</h1>
     <?php endif; ?>
     <div class="row">
-        <h1 class="col-md-4 text color"><?= h($info->message) ?></h1>
+        <h1 class="col-md-4 text color"><?= h($info['message']) ?></h1>
     </div>
 
 
 </div>
 
 <style>
+    body {
+        background-image: url("../img/<?= h($info['theme']) ?>");
+    }
     .color {
-        color: <?= h($info->color) ?>;
-        font-family: <?= h($info->font) ?>;
+        color: <?= h($info['color']) ?>;
+        font-family: <?= h($info['font']) ?>;
     }
 </style>

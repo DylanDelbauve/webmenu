@@ -1,37 +1,37 @@
 <div class="container form">
     <h1>Informations de l'application</h1>
-    <?= $this->Form->create($information,  ['type' => 'file']) ?>
+    <?= $this->Form->create(null,  ['type' => 'file']) ?>
     <div class="form-row">
         <div class="form-group col-md-6">
             <?php
 
     use Cake\Core\Configure;
 
-echo $this->Form->control('company_name', ['class' => 'form-control', 'label' => ['text' => 'Nom de l\'entreprise']]); ?>
+echo $this->Form->control('company_name', ['class' => 'form-control', 'label' => ['text' => 'Nom de l\'entreprise'], 'value' => $information['company_name']]); ?>
         </div>
         <div class="form-group col-md-6">
-            <?php echo $this->Form->control('message', ['class' => 'form-control', 'label' => ['text' => 'Message à afficher sur le menu']]); ?>
+            <?php echo $this->Form->control('message', ['class' => 'form-control', 'label' => ['text' => 'Message à afficher sur le menu'], 'value' => $information['message']]); ?>
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="logo">Logo (format png)</label>
-            <?php echo $this->Form->file('logo', ['class' => 'form-control-file']); ?>
+            <label for="logo">Logo (png/svg/jpg)</label>
+            <?php echo $this->Form->file('logo', ['class' => 'form-control-file', 'accept' => 'image/*']); ?>
         </div>
         <div class="form-group col-md-6">
             <p>Logo actuel</p>
-            <img src="/img/logo.png"  width="64" alt="">
+            <img src="/img/<?= $information['logo']?>"  width="64" alt="">
         </div>
         
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="theme">Thème (format jpeg)</label>
-            <?php echo $this->Form->file('theme', ['class' => 'form-control-file']); ?>
+            <label for="theme">Thème (png/svg/jpg)</label>
+            <?php echo $this->Form->file('theme', ['class' => 'form-control-file', 'accept' => 'image/*']); ?>
         </div>
         <div class="form-group col-md-6">
             <p>Thème actuel</p>
-            <img src="/img/theme.jpg" height="108" width="192" alt="">
+            <img src="/img/<?= $information['theme']?>" height="108" width="192" alt="">
         </div>
 
     </div>
@@ -46,7 +46,7 @@ echo $this->Form->control('company_name', ['class' => 'form-control', 'label' =>
         </div>
         <div class="form-group col-md-6">
             <label for="font">Couleur de la police</label>
-            <?php echo $this->Form->color('color', ['class' => 'form-control']); ?>
+            <?php echo $this->Form->color('color', ['class' => 'form-control', 'value' => $information['color']]); ?>
         </div>
     </div>
 

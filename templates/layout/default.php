@@ -62,7 +62,7 @@ $auth = $this->request->getSession()->read('Auth');
                     <?= $this->Html->link('Utilisateurs', '/users', ['class' => 'nav-link']) ?>
                 </li>
                 <li class="nav-item">
-                    <?= $this->Html->link('Options', '/informations/edit', ['class' => 'nav-link']) ?>
+                    <?= $this->Html->link('Options', '/informations', ['class' => 'nav-link']) ?>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto my-2 my-lg-0">

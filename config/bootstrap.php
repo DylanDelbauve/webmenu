@@ -34,6 +34,7 @@ require CORE_PATH . 'config' . DS . 'bootstrap.php';
 use Cake\Cache\Cache;
 use Cake\Core\Configure;
 use Cake\Core\Configure\Engine\PhpConfig;
+use Cake\Core\Configure\Engine\JsonConfig;
 use Cake\Datasource\ConnectionManager;
 use Cake\Error\ConsoleErrorHandler;
 use Cake\Error\ErrorHandler;
@@ -76,7 +77,9 @@ if (!env('APP_NAME') && file_exists(CONFIG . '.env')) {
  */
 try {
     Configure::config('default', new PhpConfig());
+    Configure::config('options', new JsonConfig());
     Configure::load('app', 'default', false);
+    Configure::load('options', 'options', false);
 } catch (\Exception $e) {
     exit($e->getMessage() . "\n");
 }
