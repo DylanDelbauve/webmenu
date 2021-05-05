@@ -15,7 +15,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$auth = $this->request->getSession()->read('Auth');
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,15 +24,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'auth']) ?>
-    <?= $this->Html->script(['jquery', 'bootstrap.min','app']); ?>
+    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'main', 'bootstrap-select.min']) ?>
+    <?= $this->Html->script(['jquery', 'bootstrap.bundle.min', 'app', 'bootstrap-select.min']); ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
@@ -50,9 +49,3 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </body>
 
 </html>
-
-<style>
-    body {
-        background-image: url("../img/<?= h($info['theme']) ?>");
-    }
-</style>

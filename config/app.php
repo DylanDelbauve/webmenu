@@ -294,6 +294,12 @@ return [
             'driver' => Mysql::class,
             'persistent' => false,
             'timezone' => 'UTC',
+            'host' => 'localhost',
+            'username' => 'webmenu',
+            'password' => 'webmenu',
+            'database' => 'webmenu',
+            'encoding' => 'utf8mb4',
+            'cacheMetadata' => true,
 
             /*
              * For MariaDB/MySQL the internal default changed from utf8 to utf8mb4, aka full utf-8 support, in CakePHP 3.6
@@ -337,6 +343,12 @@ return [
             'driver' => Mysql::class,
             'persistent' => false,
             'timezone' => 'UTC',
+            'host' => 'localhost',
+            'username' => 'webmenu',
+            'password' => 'webmenu',
+            'database' => 'webmenu',
+            'encoding' => 'utf8mb4',
+            'cacheMetadata' => true,
             //'encoding' => 'utf8mb4',
             'flags' => [],
             'cacheMetadata' => true,

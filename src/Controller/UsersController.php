@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Authentication\PasswordHasher\DefaultPasswordHasher;
+use Cake\Core\Configure;
 
 /**
  * Users Controller
@@ -167,18 +168,16 @@ class UsersController extends AppController
     public function beforeFilter(\Cake\Event\EventInterface $event)
     {
         parent::beforeFilter($event);
-        // Configurez l'action de connexion pour ne pas exiger d'authentification,
-        // évitant ainsi le problème de la boucle de redirection infinie
         $this->Authentication->addUnauthenticatedActions(['login', 'forgotPassword', 'resetPasswordToken']);
     }
 
     public function login()
     {
+        $info = Configure::read('Options');
+        $this->set('info', $info);
         $this->request->allowMethod(['get', 'post']);
         $result = $this->Authentication->getResult();
-        // indépendamment de POST ou GET, rediriger si l'utilisateur est connecté
         if ($result->isValid()) {
-            // rediriger vers /articles après la connexion réussie
             $redirect = $this->request->getQuery('redirect', [
                 'controller' => 'Menus',
                 'action' => 'index',
@@ -186,8 +185,7 @@ class UsersController extends AppController
 
             return $this->redirect('/menus');
         }
-        // afficher une erreur si l'utilisateur a soumis le formulaire
-        // et que l'authentification a échoué
+
         if ($this->request->is('post') && !$result->isValid()) {
             $this->Flash->error(__('Votre identifiant ou votre mot de passe est incorrect.'));
         }
@@ -198,7 +196,6 @@ class UsersController extends AppController
     {
 
         $result = $this->Authentication->getResult();
-        // indépendamment de POST ou GET, rediriger si l'utilisateur est connecté
         if ($result->isValid()) {
             $this->Authentication->logout();
             return $this->redirect(['controller' => 'Users', 'action' => 'login']);

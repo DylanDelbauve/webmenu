@@ -6,5 +6,9 @@
         "color": "#ffffff",
         "logo": "logo_logo_CercleMixte_300DPI.png",
         "theme": "theme_theme.jpg"
+    },
+    "Init": {
+        "city": "besancon",
+        "password": "webmenu"
     }
 }

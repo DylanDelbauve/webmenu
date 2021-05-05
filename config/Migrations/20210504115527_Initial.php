@@ -94,29 +94,6 @@ class Initial extends AbstractMigration
             )
             ->create();
 
-        $this->table('informations')
-            ->addColumn('company_name', 'string', [
-                'default' => null,
-                'limit' => 255,
-                'null' => false,
-            ])
-            ->addColumn('message', 'string', [
-                'default' => null,
-                'limit' => 255,
-                'null' => false,
-            ])
-            ->addColumn('color', 'char', [
-                'default' => null,
-                'limit' => 7,
-                'null' => false,
-            ])
-            ->addColumn('font', 'string', [
-                'default' => null,
-                'limit' => 255,
-                'null' => false,
-            ])
-            ->create();
-
         $this->table('menus')
             ->addColumn('date', 'date', [
                 'default' => null,
@@ -233,7 +210,6 @@ class Initial extends AbstractMigration
         $this->table('dish_types')->drop()->save();
         $this->table('dishes')->drop()->save();
         $this->table('dishes_menus')->drop()->save();
-        $this->table('informations')->drop()->save();
         $this->table('menus')->drop()->save();
         $this->table('users')->drop()->save();
     }
