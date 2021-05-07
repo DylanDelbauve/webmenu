@@ -1,14 +1,12 @@
 
 <div class="company">
-    <img src="/img/<?= h($info['logo']) ?>"  width="100px" alt="">
+    <img src="/img/<?= h($info['logo']) ?>"  width="64px" alt="">
+    <h1 id="date"></h1>
     <h1><?= h($info['company_name']) ?></h1>
 </div>
 
 <div id="main" class="container-fluid">
 
-    <div class="row">
-        <h1 id="date" class="col-md-4 text color"></h1>
-    </div>
     <?php if ($menu != null) : ?>
         <div class="row dish">
             <div class="col-md-4">
