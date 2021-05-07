@@ -25,7 +25,11 @@
     <div class="btn-group form-group">
         <?php
         echo $this->Form->button(__('Sauvegarder les modifications'), ['class' => 'btn btn-primary']);
-        echo $this->Html->link('Retour', ['action' => 'index'], ['class' => 'btn btn-primary']);
+        if ($back != '/dishes') {
+            echo $this->Html->link('Retour', $back, ['class' => 'btn btn-primary']);
+        } else {
+            echo $this->Html->link('Retour', ['action' => 'index'], ['class' => 'btn btn-primary']);
+        }
         ?>
     </div>
 </div>

@@ -78,7 +78,7 @@ class DishesController extends AppController
         }
     }
 
-    public function editallergens($id)
+    public function editallergens($id, $back = null)
     {
         $dish = $this->Dishes->findById($id)->contain(['Allergens'])->firstOrFail();
 
@@ -98,12 +98,15 @@ class DishesController extends AppController
             }
             $dish->allergens = $allergensAdded;
             if ($this->Dishes->save($dish)) {
-                $this->Flash->success(__('Votre plat a été mis à jour.'));
+                $this->Flash->success(__('Les allergènes du plat ont été mit à jour.'));
+                if ($back != null) {
+                    return $this->redirect(['controller' => 'Menus', 'action' => 'get', $back]);
+                }
                 return $this->redirect(['action' => 'get', $dish->id]);
             }
             $this->Flash->error(__('Impossible de mettre à jour le plat.'));
         }
 
-        $this->set(compact('dish'));
+        $this->set(compact('dish','back'));
     }
 }
