@@ -333,29 +333,7 @@ return [
              * which is the recommended value in production environments
              */
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
-        ],
-
-        /*
-         * The test connection is used during the test suite.
-         */
-        'test' => [
-            'className' => Connection::class,
-            'driver' => Mysql::class,
-            'persistent' => false,
-            'timezone' => 'UTC',
-            'host' => 'localhost',
-            'username' => 'webmenu',
-            'password' => 'webmenu',
-            'database' => 'webmenu',
-            'encoding' => 'utf8mb4',
-            'cacheMetadata' => true,
-            //'encoding' => 'utf8mb4',
-            'flags' => [],
-            'cacheMetadata' => true,
-            'quoteIdentifiers' => false,
-            'log' => false,
-            //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
-        ],
+        ]
     ],
 
     /*

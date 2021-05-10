@@ -79,7 +79,7 @@ try {
     Configure::config('default', new PhpConfig());
     Configure::config('options', new JsonConfig());
     Configure::load('app', 'default', false);
-    Configure::load('options', 'options', false);
+    Configure::load('options', 'options', true);
 } catch (\Exception $e) {
     exit($e->getMessage() . "\n");
 }
@@ -96,13 +96,7 @@ Configure::write('CakePdf', [
     'download' => true
 ]);
 
-/*
- * Load an environment local configuration file to provide overrides to your configuration.
- * Notice: For security reasons app_local.php **should not** be included in your git repo.
- */
-if (file_exists(CONFIG . 'app_local.php')) {
-    Configure::load('app_local', 'default');
-}
+
 
 /*
  * When debug = true the metadata cache should only last
@@ -172,7 +166,7 @@ if ($fullBaseUrl) {
 unset($fullBaseUrl);
 
 Cache::setConfig(Configure::consume('Cache'));
-ConnectionManager::setConfig(Configure::consume('Datasources'));
+ConnectionManager::setConfig(Configure::read('Datasources'));
 Log::setConfig(Configure::consume('Log'));
 Security::setSalt(Configure::consume('Security.salt'));
 

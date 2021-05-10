@@ -7,6 +7,7 @@
         <div class="alert alert-warning" role="alert">
             Ces informations viennent de vous, elles ne sont pas crées par le système
         </div>
+        <input type="text" name="ip" id="ip" class="form-control mb-3" placeholder="Adresse ip de la base de données">
         <input type="text" name="username" class="form-control mb-3" placeholder="Utilisateur de la base de données">
         <input type="password" name="password" class="form-control mb-3" placeholder="Mot de passe de la base de données">
     </fieldset>

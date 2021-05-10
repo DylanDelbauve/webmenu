@@ -6,7 +6,9 @@ namespace App\Controller;
 
 use Cake\Core\Configure;
 use Cake\Datasource\ConnectionManager;
-
+use Migrations\Migrations;
+use Cake\ORM\TableRegistry;
+use Authentication\PasswordHasher\DefaultPasswordHasher;
 
 class InitController extends AppController
 {
@@ -26,6 +28,9 @@ class InitController extends AppController
 
     public function index()
     {
+        if (Configure::read('Init.final') == true) {
+            return $this->redirect(['controller' => 'Menus', 'action' => 'index']);
+        }
         if ($this->request->is(['patch', 'post', 'put'])) {
             $info = $this->request->getData();
             Configure::write('Init', $info);
@@ -37,39 +42,70 @@ class InitController extends AppController
 
     public function options()
     {
+        if (Configure::read('Init.final') == true) {
+            return $this->redirect(['controller' => 'Menus', 'action' => 'index']);
+        }
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $db = Configure::read('Datasources.default');
-            debug($db);
-            $db['username'] = $this->request->getData('username');
-            $db['password'] = $this->request->getData('password');
-            $db['database'] = null;
-            Configure::write('Datasources.default', $db);
-            Configure::dump('app', 'default');
-            if(($connection = ConnectionManager::get('default')) != null) {
-                $city = Configure::consume('Init.city');
-                $connection->query('CREATE DATABASE IF NOT EXISTS webmenu_'.$city);
-                Configure::write('Datasources.default.database', 'webmenu_'.$city);
-                Configure::dump('app', 'default');
-                return $this->redirect(['action' => 'options']);
+            $logo = $this->request->getData('logo');
+            $theme = $this->request->getData('theme');
+
+            if ($logo->getClientFilename() != null) {
+                $logo->moveTo(WWW_ROOT . 'img/logo_'.$logo->getClientFilename());
+                $newlogo = 'logo_'.$logo->getClientFilename();
             }
-            $this->Flash->error(__('Connexion impossible'));
+            
+            if ($theme->getClientFilename() != null) {
+                $theme->moveTo(WWW_ROOT . 'img/theme_'.$theme->getClientFilename());
+                $newtheme = 'theme_'.$theme->getClientFilename();
+            }
+            $information['logo'] = $newlogo;
+            $information['theme'] = $newtheme;
+            $information = $this->request->getData();
+            Configure::write('Options', $information);
+            Configure::write('Init.final', true);
+            Configure::dump('options', 'options',['Options', 'Init', 'Datasources']);
+            return $this->redirect(['controller' => 'Menus', 'action' => 'index']);
+            $this->Flash->valid(__('Modifications sauvegardées'));
+            
         }
         $this->viewBuilder()->setLayout("init");
     }
 
     public function database() {
+        if (Configure::read('Init.final') == true) {
+            return $this->redirect(['controller' => 'Menus', 'action' => 'index']);
+        }
         if ($this->request->is(['patch', 'post', 'put'])) {
             $db = Configure::read('Datasources');
             $db['default']['username'] = $this->request->getData('username');
             $db['default']['password'] = $this->request->getData('password');
+            $db['default']['host'] = $this->request->getData('ip');
             $db['default']['database'] = null;
+            $db['default']['className'] = 'Cake\Database\Connection';
+            $db['default']['driver'] = 'Cake\Database\Driver\Mysql';
+            $db['default']['persistent'] = false;
+            $db['default']['timezone'] = 'UTC';
+            $db['default']['encoding'] = 'utf8mb4';
             Configure::write('Datasources', $db);
-            Configure::dump('app', 'default');
+            Configure::dump('options', 'options', ['Options', 'Init', 'Datasources']);
+            ConnectionManager::drop('default');
+            ConnectionManager::setConfig(Configure::read('Datasources'));
             if(($connection = ConnectionManager::get('default')) != null) {
-                $city = Configure::consume('Init.city');
-                $connection->query('CREATE DATABASE IF NOT EXISTS webmenu_'.$city);
-                Configure::write('Datasources.default.database', 'webmenu_'.$city);
-                Configure::dump('app', 'default');
+                $init = Configure::read('Init');
+                $connection->query('CREATE DATABASE IF NOT EXISTS webmenu_'.$init['city']);
+                Configure::write('Datasources.default.database', 'webmenu_'.$init['city']);
+                Configure::dump('options', 'options', ['Options', 'Datasources']);
+                ConnectionManager::drop('default');
+                ConnectionManager::setConfig(Configure::read('Datasources'));
+                $migration = new Migrations();
+                $migration->migrate();
+                $users = TableRegistry::getTableLocator()->get('Users');
+                $admin = $users->newEmptyEntity();
+                $admin->name = 'admin';
+                $admin->email = $init['city'].'@webmenu.com';
+                $hasher = new DefaultPasswordHasher();
+                $admin->password = $hasher->hash($init['password']);
+                $users->save($admin);
                 return $this->redirect(['action' => 'options']);
             }
             $this->Flash->error(__('Connexion impossible'));

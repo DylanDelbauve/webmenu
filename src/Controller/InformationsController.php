@@ -44,8 +44,8 @@ class InformationsController extends AppController
             $information['logo'] = $newlogo;
             $information['theme'] = $newtheme;
             Configure::write('Options', $information);
-            Configure::dump('options', 'options',['Options']);
-            return $this->redirect(['action' => 'edit']);
+            Configure::dump('options', 'options',['Options', 'Init', 'Datasources']);
+            return $this->redirect(['action' => 'index']);
             $this->Flash->valid(__('Modifications sauvegardées'));
         }
         $this->set(compact('information'));
