@@ -3,3 +3,4 @@ tmp/
 logs/
 logs/error.log
 tmp/debug_kit.sqlite
+!webroot/img/
