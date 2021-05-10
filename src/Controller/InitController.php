@@ -58,9 +58,9 @@ class InitController extends AppController
                 $theme->moveTo(WWW_ROOT . 'img/theme_'.$theme->getClientFilename());
                 $newtheme = 'theme_'.$theme->getClientFilename();
             }
+            $information = $this->request->getData();
             $information['logo'] = $newlogo;
             $information['theme'] = $newtheme;
-            $information = $this->request->getData();
             Configure::write('Options', $information);
             Configure::write('Init.final', true);
             Configure::dump('options', 'options',['Options', 'Init', 'Datasources']);
