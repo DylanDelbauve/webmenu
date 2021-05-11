@@ -31,10 +31,9 @@ $auth = $this->request->getSession()->read('Auth');
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
     <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'main', 'bootstrap-select.min']) ?>
-    <?= $this->Html->script(['jquery', 'bootstrap.bundle.min', 'app', 'bootstrap-select.min']); ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
+
 </head>
 
 <body>
@@ -47,5 +46,8 @@ $auth = $this->request->getSession()->read('Auth');
     <footer>
     </footer>
 </body>
+
+<?= $this->Html->script(['jquery', 'bootstrap.bundle.min', 'app', 'bootstrap-select.min']); ?>
+<?= $this->fetch('script') ?>
 
 </html>

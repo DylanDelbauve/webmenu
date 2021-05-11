@@ -37,3 +37,7 @@ legend {
  padding-right: 5px;
  border-bottom:none;
 }
+
+.hidden {
+  visibility: hidden;
+}

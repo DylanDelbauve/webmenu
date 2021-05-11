@@ -1,6 +1,6 @@
 <div class="container form">
     <h1>Initialisation du système</h1>
-    <?= $this->Form->create(null) ?>
+    <?= $this->Form->create(null, ['id' => 'form']) ?>
 
     <fieldset>
         <legend>Base de données</legend>
@@ -12,6 +12,6 @@
         <input type="password" name="password" class="form-control mb-3" placeholder="Mot de passe de la base de données">
     </fieldset>
 
-    <?= $this->Form->button(__('Suivant'), ['class' => 'btn btn-primary']) ?>
+    <?= $this->Form->button(__('Suivant'), ['class' => 'btn btn-primary', 'id' => 'save']) ?>
     <?= $this->Form->end() ?>
 </div>
