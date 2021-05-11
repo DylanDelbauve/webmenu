@@ -47,6 +47,7 @@ class MenusTable extends Table
             'foreignKey' => 'menu_id',
             'targetForeignKey' => 'dish_id',
             'joinTable' => 'dishes_menus',
+            'through' => 'DishesMenus',
         ]);
     }
 

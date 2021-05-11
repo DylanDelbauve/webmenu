@@ -6,6 +6,7 @@ use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
 use Cake\I18n\Date;
 use Cake\Core\Configure;
+use Cake\ORM\Entity;
 
 class MenusController extends AppController
 {
@@ -142,7 +143,6 @@ class MenusController extends AppController
                 $response = $response->where(['dish_type_id' => $id]);
             }
 
-
             $this->RequestHandler->respondAs('json');
             $this->viewBuilder()->setLayout('ajax');
 
@@ -158,22 +158,19 @@ class MenusController extends AppController
     {
         $idMenu = $this->request->getData('idMenu');
         $idDish = $this->request->getData('idDish');
+        $priority = $this->request->getData('priority');
+        if ($priority === "") {
+            $priority = 1;
+        }
         $menu = $this->Menus->findById($idMenu)->contain(['Dishes'])->first();
         $this->response->withType('application/json');
         $dishesTable = TableRegistry::getTableLocator()->get('Dishes');
         $dish = $dishesTable->get($idDish);
-        $tempArray = $menu->dishes;
-
         if ($this->request->is('put')) {
-            array_push($tempArray, $dish);
-            $menu->dishes = $tempArray;
+            $dish->_joinData = new Entity(['priority' => $priority]);
+            $this->Menus->Dishes->link($menu, [$dish]);
         } else if ($this->request->is('delete')) {
-            for ($i = 0; $i < count($tempArray); $i++) {
-                if ($tempArray[$i]->id == $dish->id)
-                    $element = $i;
-            }
-            array_splice($tempArray, $element, 1);
-            $menu->dishes = $tempArray;
+            $this->Menus->Dishes->unlink($menu, [$dish]);
         }
 
         $this->Menus->save($menu);
@@ -186,7 +183,12 @@ class MenusController extends AppController
     {
         Date::setJsonEncodeFormat('yyyy-MM-dd');
         $date = Date::now();
-        $query = $this->Menus->find()->contain(['Dishes', 'Dishes.DishTypes', 'Dishes.Allergens'])->where(['Menus.date =' => $date]);
+        $query = $this->Menus->find()->contain(['Dishes' => [
+            'strategy' => 'select',
+            'queryBuilder' => function ($q) {
+                return $q->order(['DishesMenus.priority' => 'DESC']);
+            }
+        ], 'Dishes.DishTypes', 'Dishes.Allergens'])->where(['Menus.date =' => $date]);
         $menu = $query->first();
         $info = Configure::read('Options');
         $this->set('menu', $menu);
@@ -206,7 +208,7 @@ class MenusController extends AppController
                 [
                     'orientation' => 'portrait',
                     'download' => true,
-                    'filename' => 'Menu_' . $menu->date. '.pdf'
+                    'filename' => 'Menu_' . $menu->date . '.pdf'
                 ]
             );
         $this->set('menu', $menu);

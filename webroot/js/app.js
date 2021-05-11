@@ -30,6 +30,7 @@ function onChange() {
 function addDish() {
   var idMenu = document.getElementById("idMenu").value;
   var idDish = document.getElementById("dishes").value;
+  var priority = document.getElementById("priority").value;
   $.ajax({
     url: "/menus/editdish/",
     traditional: false,
@@ -37,6 +38,7 @@ function addDish() {
     data: {
       idMenu: idMenu,
       idDish: idDish,
+      priority: priority,
     },
     success: function () {
       reload();
@@ -84,6 +86,7 @@ function reload() {
       $("tbody").empty();
       dishes = response.menu.dishes;
       dishes.forEach((e) => {
+        console.log(e);
         $("tbody").append(
           '<tr id="' +
             e.id +
@@ -91,7 +94,9 @@ function reload() {
             e.name +
             ' <span class="badge badge-info">' +
             e.dish_type.name +
-            '</span></td> <td><button class="btn btn-danger" id="' +
+            '</span></td> <td>' +
+            e._joinData.priority +
+            '</td><td><button class="btn btn-danger" id="' +
             e.id +
             '" onclick="delDish(this.id)">Supprimer</button></td></tr>'
         );
@@ -127,10 +132,3 @@ function getCookie(cname) {
   $("#confirm").on('click', () => {return true;});
   $("#cancel").on('click', () => {return false;});
 }*/
-
-document.getElementById("save").addEventListener("click", () => {
-  var button = document.getElementById("save");
-  button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Chargement...';
-  button.disabled = true;
-  document.getElementById('form').submit();
-});

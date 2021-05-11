@@ -7,6 +7,7 @@
             <?= $this->Form->select('dish_type_filter', $dishtypes, ['onchange' => 'onChange()', 'id' => 'select_type', 'empty' => 'Type de plat', 'class' => 'form-control selectpicker    ']) ?>
         </div>
         <?= $this->Form->select('dishes', $dishes, ['id' => 'dishes', 'class' => 'form-control selectpicker', 'data-live-search' => true ]) ?>
+        <?= $this->Form->number('priority', ['id' => 'priority', 'class' => 'form-control', 'label' => false, 'placeholder' => 'Priorité d\'affichage', 'min' => 1, 'max' => 10]) ?>
         <div class="input-group-append">
             <button class="btn btn-primary" onclick="addDish()">Ajouter</button>
             <?= $this->Html->link('Retour', ['action' => 'get', $menu->id], ['class' => 'btn btn-primary']) ?>
@@ -19,6 +20,7 @@
         <thead class="thead-dark">
             <tr>
                 <th scope="col">Plat</th>
+                <th scope="col">Priorité</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -27,6 +29,9 @@
                 <tr id="<?= h($dish->id) ?>">
                     <td>
                         <?= h($dish->name) ?> <span class="badge badge-info"><?= h($dish->dish_type->name) ?></span>
+                    </td>
+                    <td>
+                        <?= h($dish->_joinData->priority) ?>
                     </td>
                     <td>
                         <button class="btn btn-danger" id="<?= h($dish->id) ?>" onclick="delDish(this.id)">Supprimer</button>

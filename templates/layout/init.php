@@ -47,7 +47,7 @@ $auth = $this->request->getSession()->read('Auth');
     </footer>
 </body>
 
-<?= $this->Html->script(['jquery', 'bootstrap.bundle.min', 'app', 'bootstrap-select.min']); ?>
+<?= $this->Html->script(['jquery', 'bootstrap.bundle.min', 'init', 'bootstrap-select.min']); ?>
 <?= $this->fetch('script') ?>
 
 </html>
