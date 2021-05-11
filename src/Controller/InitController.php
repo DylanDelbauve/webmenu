@@ -61,6 +61,8 @@ class InitController extends AppController
             $information = $this->request->getData();
             $information['logo'] = $newlogo;
             $information['theme'] = $newtheme;
+            $information['font'] = 'Arial, sans-serif';
+            $information['color'] = '#000000';
             Configure::write('Options', $information);
             Configure::write('Init.final', true);
             Configure::dump('options', 'options',['Options', 'Init', 'Datasources']);
