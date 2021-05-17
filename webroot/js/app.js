@@ -19,7 +19,7 @@ function onChange() {
             element.dish_type.name +
             ")</i></option>"
         );
-        
+
         $("#dishes").selectpicker("refresh");
       });
     },
@@ -94,7 +94,7 @@ function reload() {
             e.name +
             ' <span class="badge badge-info">' +
             e.dish_type.name +
-            '</span></td> <td>' +
+            "</span></td> <td>" +
             e._joinData.priority +
             '</td><td><button class="btn btn-danger" id="' +
             e.id +
@@ -123,6 +123,31 @@ function getCookie(cname) {
     }
   }
   return "";
+}
+
+function onInput() {
+  var str = document.getElementById("name").value;
+  $(".list-group").empty();
+  if (str.length > 0) {
+    $.ajax({
+      url: "/dishes/research/" + str,
+      traditional: false,
+      type: "GET",
+      success: function (response) {
+        dishes = response.dishes;
+        dishes.forEach((e) => {
+          console.log(e);
+          $(".list-group").append(
+            '<li class="list-group-item">' + e.name + ' <span class="badge badge-info">'+e.dish_type.name+'</span></li>'
+          );
+        });
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log(jqXHR, textStatus, errorThrown);
+      },
+      dataType: "json",
+    });
+  }
 }
 
 /*window.confirm = (msg, callback) => {

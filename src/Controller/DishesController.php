@@ -23,6 +23,22 @@ class DishesController extends AppController
         $this->set(compact('dish'));
     }
 
+    public function research($str) {
+        if ($this->request->is('ajax')) {
+            $this->RequestHandler->renderAs($this, 'json');
+            $this->response->withType('application/json');
+            $response = $this->Dishes->find()->where(['Dishes.name LIKE' => $str.'%'])->contain(['DishTypes'])->all();
+            $this->RequestHandler->respondAs('json');
+            $this->viewBuilder()->setLayout('ajax');
+
+            // Créer un contexte sites à renvoyer 
+            $this->set('dishes', $response);
+
+            // Généreration des vues de données
+            $this->set('_serialize', ['dishes']);
+        }
+    }
+
     public function add()
     {
         $dishTypesTable = TableRegistry::getTableLocator()->get('DishTypes');
