@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Modifier les plats d'un menu (<?= h($menu->name) ?>)</h1>
+    <h1>Modifier les plats du menu du <?= h($menu->date) ?></h1>
     <?= $this->Form->create(null, ['onsubmit' => 'event.preventDefault()']) ?>
     <?= $this->Form->hidden('id', ['id' => 'idMenu', 'value' => $menu->id]) ?>
     <div class="input-group">

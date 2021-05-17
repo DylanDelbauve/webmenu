@@ -41,3 +41,22 @@ legend {
 .hidden {
   visibility: hidden;
 }
+
+.btn-allergens {
+  background-color: rgb(247, 94, 94);
+  color: white;
+
+}
+
+.btn-allergens:hover {
+  color: white;
+  background-color: rgb(126, 0, 0);
+}
+
+.btn-allergens.active {
+  background-color: seagreen;
+}
+
+.btn-allergens:hover.active {
+  background-color: rgb(19, 83, 47);
+}
