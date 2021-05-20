@@ -5,6 +5,10 @@
 
     <fieldset>
         <legend>Administrateur</legend>
+        <div class="alert alert-danger" role="alert">
+            Ces informations serviront à vous connecter au système. <b>Le mot de passe n'est pas récupérable</b>, veillez à bien le noter.
+            Merci de votre compréhension.
+        </div>
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Ville" aria-label="Ville" aria-describedby="ville" name="city">
             <div class="input-group-append">

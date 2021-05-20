@@ -30,7 +30,7 @@ $auth = $this->request->getSession()->read('Auth');
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'main', 'bootstrap-select.min']) ?>
+    <?= $this->Html->css(['normalize.min', 'bootstrap.min', 'main', 'bootstrap-select.min', 'bootstrap-icons']) ?>
     <?= $this->Html->script(['jquery', 'bootstrap.bundle.min', 'app', 'bootstrap-select.min']); ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -59,10 +59,10 @@ $auth = $this->request->getSession()->read('Auth');
                     <?= $this->Html->link('Allergènes', '/allergens', ['class' => 'nav-link']) ?>
                 </li>
                 <li class="nav-item">
-                    <?= $this->Html->link('Utilisateurs', '/users', ['class' => 'nav-link']) ?>
+                    <?= $this->Html->link('<i class="bi bi-people-fill"></i>', '/users', ['class' => 'nav-link', 'escape' => false]) ?>
                 </li>
                 <li class="nav-item">
-                    <?= $this->Html->link('Options', '/informations', ['class' => 'nav-link']) ?>
+                    <?= $this->Html->link('<i class="bi bi-gear-fill"></i>', '/informations', ['class' => 'nav-link', 'escape' => false]) ?>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto my-2 my-lg-0">

@@ -1,8 +1,8 @@
 <div class="container-fluid">
     <h1>Plats</h1>
     <div class="btn-toolbar">
-        <div class="btn-group mr-2">
-            <?= $this->Html->link('Ajouter un plat', ['action' => 'add'], ['class' => 'btn btn-primary']) ?>
+    <div class="btn-group mr-2">
+            <?= $this->Html->link('<i class="bi bi-plus-lg"></i>', ['action' => 'add'], ['class' => 'btn btn-success', 'escape' => false]) ?>
         </div>
         <div class="btn-group">
             <?= $this->Paginator->sort('name', "Tri par nom") ?>
@@ -25,9 +25,13 @@
                     </td>
                     <td>
                         <div class="btn-group">
-                            <?= $this->Html->link('Voir', ['action' => 'view', $dish->id], ['class' => 'btn btn-primary']) ?>
-                            <?= $this->Html->link('Modifier les allergènes', ['action' => 'editallergens', $dish->id], ['class' => 'btn btn-primary']) ?>
-                            <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $dish->id], ['confirm' => 'Êtes-vous sûr ?', 'class' => 'btn btn-danger']) ?>
+                        <?= $this->Html->link('<i class="bi bi-eye-fill"></i>', ['action' => 'view', $dish->id], ['class' => 'btn btn-primary', 'escape' => false]) ?>
+                            <?= $this->Html->link('<i class="bi bi-pen-fill"></i> allergènes', ['action' => 'editallergens', $dish->id], ['class' => 'btn btn-success', 'escape' => false]) ?>
+                            <?= $this->Form->postLink(
+                                '<i class="bi bi-trash-fill"></i>',
+                                ['action' => 'delete', $dish->id],
+                                ['confirm' => 'Êtes-vous sûr ?', 'class' => 'btn btn-danger', 'escape' => false]
+                            ) ?>
                         </div>
                     </td>
                 </tr>
