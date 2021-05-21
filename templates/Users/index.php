@@ -9,7 +9,7 @@
     <h1>Menus</h1>
     <div class="btn-toolbar">
         <div class="btn-group mr-2">
-            <?= $this->Html->link('Ajouter un utilisateur', ['action' => 'add'], ['class' => 'btn btn-primary']) ?>
+            <?= $this->Html->link('<i class="bi bi-plus-lg"></i>', ['action' => 'add'], ['class' => 'btn btn-success', 'escape' => false]) ?>
         </div>
         <div class="btn-group">
             <?= $this->Paginator->sort('id', 'Tri par ID') ?>
@@ -41,9 +41,9 @@
                     </td>
                     <td>
                         <div class="btn-group">
-                            <?= $this->Html->link('Voir', ['action' => 'view', $user->id], ['class' => 'btn btn-success']) ?>
+                        <?= $this->Html->link('<i class="bi bi-eye-fill"></i>', ['action' => 'view', $user->id], ['class' => 'btn btn-primary', 'escape' => false]) ?>
                             <?php if ($auth->id == 1 && $user->id != 1) : ?>
-                                <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $user->id], ['confirm' => 'Êtes-vous sûr ?', 'class' => 'btn btn-danger']) ?>
+                                <?= $this->Form->postLink('<i class="bi bi-trash-fill"></i>', ['action' => 'delete', $user->id], ['confirm' => 'Êtes-vous sûr ?', 'class' => 'btn btn-danger', 'escape' => false]) ?>
                             <?php endif; ?>
                         </div>
                     </td>

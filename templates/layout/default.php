@@ -59,10 +59,10 @@ $auth = $this->request->getSession()->read('Auth');
                     <?= $this->Html->link('Allergènes', '/allergens', ['class' => 'nav-link']) ?>
                 </li>
                 <li class="nav-item">
-                    <?= $this->Html->link('<i class="bi bi-people-fill"></i>', '/users', ['class' => 'nav-link', 'escape' => false]) ?>
+                    <?= $this->Html->link('<i class="bi bi-people-fill"></i> Utilisateurs', '/users', ['class' => 'nav-link', 'escape' => false]) ?>
                 </li>
                 <li class="nav-item">
-                    <?= $this->Html->link('<i class="bi bi-gear-fill"></i>', '/informations', ['class' => 'nav-link', 'escape' => false]) ?>
+                    <?= $this->Html->link('<i class="bi bi-gear-fill"></i> Options', '/informations', ['class' => 'nav-link', 'escape' => false]) ?>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto my-2 my-lg-0">

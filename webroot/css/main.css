@@ -60,3 +60,12 @@ legend {
 .btn-allergens:hover.active {
   background-color: rgb(19, 83, 47);
 }
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

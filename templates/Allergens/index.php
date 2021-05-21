@@ -2,7 +2,7 @@
     <h1>Allergènes</h1>
     <div class="btn-toolbar">
         <div class="btn-group mr-2">
-            <?= $this->Html->link('Ajouter un allergène', ['action' => 'add'], ['class' => 'btn btn-primary']) ?>
+            <?= $this->Html->link('<i class="bi bi-plus-lg"></i>', ['action' => 'add'], ['class' => 'btn btn-success', 'escape' => false]) ?>
         </div>
         <div class="btn-group">
             <?= $this->Paginator->sort('name', 'Tri par nom') ?>
@@ -24,8 +24,8 @@
                     </td>
                     <td>
                         <div class="btn-group">
-                            <?= $this->Html->link('Modifier', ['action' => 'edit', $allergen->id], ['class' => 'btn btn-success']) ?>
-                            <?= $this->Form->postLink('Supprimer', ['action' => 'delete', $allergen->id], ['confirm' => 'Êtes-vous sûr ?', 'class' => 'btn btn-danger']) ?>
+                            <?= $this->Html->link('<i class="bi bi-pen-fill"></i>', ['action' => 'editallergens', $allergen->id], ['class' => 'btn btn-success', 'escape' => false]) ?>
+                            <?= $this->Form->postLink('<i class="bi bi-trash-fill"></i>', ['action' => 'delete', $allergen->id], ['confirm' => 'Êtes-vous sûr ?', 'class' => 'btn btn-danger', 'escape' => false]) ?>
                         </div>
                     </td>
                 </tr>
