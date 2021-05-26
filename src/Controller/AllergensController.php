@@ -6,10 +6,11 @@ use App\Controller\AppController;
 class AllergensController extends AppController
 {
 
+    public $paginate = ['limit' => 10];
     public function index()
     {
         $this->loadComponent('Paginator');
-        $allergens = $this->Paginator->paginate($this->Allergens->find());
+        $allergens = $this->Paginator->paginate($this->Allergens->find(), $this->paginate);
         $this->set(compact('allergens'));
     }
 

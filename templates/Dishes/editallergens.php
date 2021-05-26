@@ -16,7 +16,7 @@
                         $checked = true;
                 };
             ?>
-                <?php echo $this->Form->control(strval($allergen->id), ['type' => 'checkbox', 'value' => $allergen->id, 'checked' => $checked, 'hiddenField' => false, 'label' => ['text' => $allergen->name, 'class' => 'btn btn-allergens mr-1 col-sm', 'for' => strval($allergen->id)]]); ?>
+                <?php echo $this->Form->control(strval($allergen->id), ['type' => 'checkbox', 'value' => $allergen->id, 'checked' => $checked, 'hiddenField' => false, 'label' => ['text' => $allergen->name, 'class' => 'btn btn-allergens mr-1 col row-sm', 'for' => strval($allergen->id)]]); ?>
 
             <?php endforeach; ?>
         </div>

@@ -108,6 +108,16 @@ class InitController extends AppController
                 $hasher = new DefaultPasswordHasher();
                 $admin->password = $hasher->hash($init['password']);
                 $users->save($admin);
+                $dishtypes = TableRegistry::getTableLocator()->get('DishTypes');
+                $dishtype = $dishtypes->newEmptyEntity();
+                $dishtype->name = 'Entrée';
+                $dishtypes->save($dishtype);
+                $dishtype = $dishtypes->newEmptyEntity();
+                $dishtype->name = 'Plat';
+                $dishtypes->save($dishtype);
+                $dishtype = $dishtypes->newEmptyEntity();
+                $dishtype->name = 'Dessert';
+                $dishtypes->save($dishtype);
                 return $this->redirect(['action' => 'options']);
             }
             $this->Flash->error(__('Connexion impossible'));

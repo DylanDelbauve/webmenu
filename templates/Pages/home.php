@@ -66,9 +66,6 @@ $cakeDescription = 'Menu principal';
                     <?= $this->Html->link('Plats', '/dishes', ['class' => 'nav-link']) ?>
                 </li>
                 <li class="nav-item">
-                    <?= $this->Html->link('Types de plat', '/dishtypes', ['class' => 'nav-link']) ?>
-                </li>
-                <li class="nav-item">
                     <?= $this->Html->link('Menus', '/menus', ['class' => 'nav-link']) ?>
                 </li>
                 <li class="nav-item">
