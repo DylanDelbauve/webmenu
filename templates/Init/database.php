@@ -8,6 +8,7 @@
             Ces informations permettront au système de créer et de gérer la base de données
         </div>
         <input type="text" name="ip" id="ip" class="form-control mb-3" placeholder="Adresse ip de la base de données">
+        <input type="number" name="port" id="port" class="form-control mb-3" placeholder="Port de la base de données (optionnel)">
         <input type="text" name="username" class="form-control mb-3" placeholder="Utilisateur de la base de données">
         <input type="password" name="password" class="form-control mb-3" placeholder="Mot de passe de la base de données">
     </fieldset>

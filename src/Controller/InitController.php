@@ -88,6 +88,8 @@ class InitController extends AppController
             $db['default']['persistent'] = false;
             $db['default']['timezone'] = 'UTC';
             $db['default']['encoding'] = 'utf8mb4';
+            if ($this->request->getData('port') != '')
+                $db['default']['port'] = $this->request->getData('port');
             Configure::write('Datasources', $db);
             Configure::dump('options', 'options', ['Options', 'Init', 'Datasources']);
             ConnectionManager::drop('default');
