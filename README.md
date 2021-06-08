@@ -1,53 +1,46 @@
-# CakePHP Application Skeleton
+# Web menu
 
-[![Build Status](https://img.shields.io/github/workflow/status/cakephp/app/CakePHP%20App%20CI/master?style=flat-square)](https://github.com/cakephp/app/actions)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
-[![PHPStan](https://img.shields.io/badge/PHPStan-level%207-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
+Cette application web est créée sous PHP 8 accompagné du framework CakePhP 4.x.
 
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 4.x.
+## Dépendances
 
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
+-   PHP 8 avec CakePHP 4.6
+    
+-   Bootstrap 4.6
+    
+-   MySQL/MariaDB
+    
+-   Serveur Web Apache ou Nginx (Ce dernier n'est pas présenté dans cette documentation)
+    
 
 ## Installation
 
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
+1.  Décompressez le contenu de l'archive dans le dossier des sites web d'Apache (très souvent un dossier `www`, consulter la documentation du système d'exploitation où vous hébergez Apache).
+2. Dans le dossier des sites valides de Apache (`/etc/apache2/sites-available` sur Ubuntu par exemple), créer un nouveau fichier `domaine.extension.conf`.
+3. Dans ce fichier, collez et adaptez le code suivant :
+```apache
+<VirtualHost *:80>
+    ServerName domaine.extension
+    DocumentRoot <chemin_vers_www>/www/<dossier_du_site>/webroot
 
-If Composer is installed globally, run
-
-```bash
-composer create-project --prefer-dist cakephp/app
+    <Directory <chemin_vers_www>/www/<dossier_du_site>/webroot>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+    </Directory>
+</VirtualHost>
 ```
-
-In case you want to use a custom app dir name (e.g. `/myapp/`):
-
+4.	Dans une invite de commande lancer ces deux lignes de commande (Linux seulement):
 ```bash
-composer create-project --prefer-dist cakephp/app myapp
+sudo a2ensite domaine.extension
+# OU
+sudo ln -s /etc/apache2/sites-available/domaine.extension.conf /etc/apache2/sites-enabled/
+# Puis
+sudo systemctl restart apache2
 ```
+5. Vous pouvez accéder au site (`http://domaine.extension`)
 
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
+## Première installation
+L'initialisation du système est à l'adresse `http://domaine.extension/init/`.
 
-```bash
-bin/cake server -p 8765
-```
+Note : Si les accès de la base de données ne permettent pas au système de créer la base de données, vous pouvez la créer avant l'initialisation avec le nom `webmenu_<nom_de_la_ville>` (le login admin est <nom_de_la_ville>@webmenu.com).
 
-Then visit `http://localhost:8765` to see the welcome page.
-
-## Update
-
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
-
-## Configuration
-
-Read and edit the environment specific `config/app_local.php` and setup the 
-`'Datasources'` and any other configuration relevant for your application.
-Other environment agnostic settings can be changed in `config/app.php`.
-
-## Layout
-
-The app skeleton uses [Milligram](https://milligram.io/) (v1.3) minimalist CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
