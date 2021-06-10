@@ -24,7 +24,7 @@
                     </td>
                     <td>
                         <div class="btn-group">
-                            <?= $this->Html->link('<i class="bi bi-pen-fill"></i>', ['action' => 'editallergens', $allergen->id], ['class' => 'btn btn-success', 'escape' => false]) ?>
+                            <?= $this->Html->link('<i class="bi bi-pen-fill"></i>', ['action' => 'edit', $allergen->id], ['class' => 'btn btn-success', 'escape' => false]) ?>
                             <?= $this->Form->postLink('<i class="bi bi-trash-fill"></i>', ['action' => 'delete', $allergen->id], ['confirm' => 'Êtes-vous sûr ?', 'class' => 'btn btn-danger', 'escape' => false]) ?>
                         </div>
                     </td>
